@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "title": "APRENDE DESDE CERO UNA DE LAS PROFESIONES MÁS RENTABLES PARA COMENZAR A GENERAR INGRESOS POR INTERNET",
+    "description": "Descubre todo lo que necesitas para comenzar en el mundo de los negocios digitales. Obtén las herramientas, estrategias y conocimientos clave para conseguir tu primer trabajo en línea o aumentar las ventas de tu propio producto o servicio, sin necesidad de experiencia previa.",
+    "cta": {
+      "text": "¡Quiero entrar! Toca aquí",
+      "url": "https://wa.me"
+    }
+  },
+  "audience": {
+    "title": "Esta formación es para ti, si:",
+    "points": [
+      "Quieres generar ingresos extra desde la comodidad de tu casa, sin necesidad de cumplir con horarios estrictos o trasladarte a una oficina.",
+      "Quieres aprovechar las oportunidades del mundo digital para empezar a ganar dinero extra de forma autónoma y a tu propio ritmo.",
+      "Has intentado aprender por tu cuenta cómo ganar dinero online, pero te estresa la cantidad de información y necesitas un camino claro y sencillo para comenzar.",
+      "Estás buscando una comunidad y un acompañamiento, para conseguir una buena oferta de trabajo."
+    ]
+  },
+  "benefits": {
+    "title": "¿Sabes qué lograrás con Aprende y Emprende?",
+    "points": [
+      "Aprenderás sobre los conceptos básicos del Marketing Digital, para que puedas entender completamente cómo funcionan los negocios, aun sin conocimiento previo.",
+      "Aprenderás a ser un experto en definición de cliente ideal, prospección, gestión de herramientas automatizadas y Marketing en frío.",
+      "Dejarás de pasar horas buscando información desordenada, una buena propuesta de trabajo y un acompañamiento en tu proceso de aprendizaje.",
+      "Aprenderás habilidades blandas que cualquier empresa necesita."
+    ]
+  },
+  "modules": {
+    "title": "¿Qué encontrarás en Aprende y Emprende?",
+    "sections": [
+      {
+        "title": "Definición de tu cliente ideal desde cero",
+        "description": "Aprenderás paso a paso cómo identificar y definir a tu cliente ideal, de manera que puedas enfocar tus esfuerzos de manera efectiva y maximizar tus resultados en menos tiempo."
+      },
+      {
+        "title": "Dominio de LinkedIn e Instagram para prospección",
+        "description": "Especialízate en las técnicas más efectivas de prospección en LinkedIn e Instagram. Aprenderás a conectar con las personas adecuadas y generar conversaciones que te lleven a oportunidades de negocio, tanto si estás ofreciendo un producto como un servicio o buscas una propuesta de trabajo."
+      },
+      {
+        "title": "Gestión de CRM para optimizar tus clientes",
+        "description": "Te convertirás en un experto en el manejo de CRM, entendiendo cómo gestionar la información de tus prospectos y automatizar procesos para aumentar tu productividad, sin perder tiempo en tareas manuales."
+      },
+      {
+        "title": "Estrategias de Email Marketing que generan resultados",
+        "description": "Aprenderás a crear campañas de email marketing efectivas, con ejemplos prácticos y reales, para generar interés en tus clientes, captar su atención y convertirlos en ventas recurrentes."
+      }
+    ]
+  },
+  "extras": {
+    "title": "Además de acceso de por vida a todos los nuevos módulos que se vendrán, también accederás a:",
+    "items": [
+      {
+        "title": "Comunidad Exclusiva de Oportunidades",
+        "description": "Nunca estarás solo/a en tu proceso. Tendrás acceso a una comunidad de Whatsapp donde compartirás ofertas de trabajo remoto, oportunidades de colaboración y proyectos freelance, relacionados con marketing digital."
+      },
+      {
+        "title": "Clases grabadas, material de trabajo y ejemplos reales",
+        "description": "Tendrás acceso a clases grabadas, material de trabajo y ejemplos prácticos reales de clientes. Para que puedas ver y aplicar a tu propio ritmo, cubriendo todos los conceptos básicos del marketing digital."
+      },
+      {
+        "title": "1 sesión de consultoría",
+        "description": "Tendrás una reunión personalizada conmigo para resolver todas tus dudas y recibir orientación específica en tu camino hacia generar ingresos online. Te brindaré consejos prácticos y adaptados a tus necesidades."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "¿Qué dicen mis alumnos sobre esta formación?",
+    "description": "Testimonios de estudiantes satisfechos que han transformado sus vidas gracias a Aprende y Emprende."
+  },
+  "pricing": {
+    "title": "¡Pago único con acceso de por vida!",
+    "price": "$150 USD",
+    "note": "Como se van a estar agregando nuevos módulos constantemente, el precio irá subiendo.",
+    "cta": {
+      "text": "¡Quiero ingresar ya! Toca aquí",
+      "url": "https://wa.me"
+    }
+  },
+  "instructor": {
+    "name": "Juan Cruz Cummaudo",
+    "title": "Fundador de la academia Aprende y Emprende y de JuanConsulting",
+    "description": "Llevo 2 años dedicándome al Marketing Digital, he ayudado a 5 empresas a conseguir entre 40 a 100 reuniones de ventas calificadas, mejorar sus procesos de captación de clientes y sus embudos de ventas. Te voy a acompañar a que consigas los resultados que tanto esperas, ¡te veo dentro!"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "questions": [
+      {
+        "question": "¿Este curso es adecuado para principiantes?",
+        "answer": "Sí, el curso está diseñado para personas sin experiencia previa en marketing digital."
+      },
+      {
+        "question": "¿Cuánto tiempo tendré acceso al curso?",
+        "answer": "Tendrás acceso de por vida, incluyendo todas las actualizaciones futuras."
+      },
+      {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Aceptamos pagos a través de diversas plataformas seguras. Para más detalles, contáctanos."
+      }
+    ]
+  }
+}
