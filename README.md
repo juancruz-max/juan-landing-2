@@ -1,8 +1,8 @@
-# Aprende y Emprende - Landing Page
+# Cromax Academy - Landing Page
 
 ## Descripción
 
-Landing page para "Aprende y Emprende", una academia de marketing digital que enseña desde cero una de las profesiones más rentables para generar ingresos por internet. Diseño moderno, responsive, con animaciones sutiles y panel de administración para editar contenido.
+Landing page para "Cromax Academy", una academia de marketing digital que enseña desde cero una de las profesiones más rentables para generar ingresos por internet. Diseño moderno, responsive, con animaciones sutiles y panel de administración para editar contenido.
 
 ## Tecnologías
 

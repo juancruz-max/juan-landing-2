@@ -35,7 +35,7 @@ const getExtraIcon = (index: number) => {
 
 const Extras = ({ title, items }: ExtrasProps) => {
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <section id="extras" className="py-24 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

@@ -31,7 +31,7 @@ const FAQ = ({ title, items }: FAQProps) => {
   }));
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="faq" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

@@ -15,7 +15,7 @@
     ]
   },
   "benefits": {
-    "title": "¿Sabes qué lograrás con Aprende y Emprende?",
+    "title": "¿Sabes qué lograrás con Cromax Academy?",
     "items": [
       {
         "icon": "📚",
@@ -40,7 +40,7 @@
     ]
   },
   "modules": {
-    "title": "¿Qué encontrarás en Aprende y Emprende?",
+    "title": "¿Qué encontrarás en Cromax Academy?",
     "sections": [
       {
         "title": "Definición de tu cliente ideal desde cero",
@@ -79,22 +79,57 @@
   },
   "testimonials": {
     "title": "¿Qué dicen mis alumnos sobre esta formación?",
-    "subtitle": "Testimonios de estudiantes satisfechos que han transformado sus vidas gracias a Aprende y Emprende.",
+    "subtitle": "Testimonios de estudiantes satisfechos que han transformado sus vidas gracias a Cromax Academy.",
     "viewText": "Ver testimonio",
-    "items": []
+    "items": [
+      {
+        "quote": "Testimonio de estudiante satisfecho con la formación de Cromax Academy",
+        "author": "Estudiante 1",
+        "role": "Estudiante de Marketing Digital",
+        "thumbnail": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf4a5f754_1.png",
+        "authorImage": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf4a5f754_1.png",
+        "companyLogo": "",
+        "linkedinUrl": "",
+        "profileUrl": "",
+        "testimonial": "",
+        "showVideo": true,
+        "videoSrc": "https://d1yei2z3i6k35z.cloudfront.net/9799259/670ed662ca384_VID_230721128_235646_020.mp4",
+        "videoPoster": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf4a5f754_1.png"
+      },
+      {
+        "quote": "Testimonio de estudiante satisfecho con la formación de Cromax Academy",
+        "author": "Estudiante 2",
+        "role": "Estudiante de Marketing Digital",
+        "thumbnail": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf76c07d3_2.png",
+        "authorImage": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf76c07d3_2.png",
+        "companyLogo": "",
+        "linkedinUrl": "",
+        "profileUrl": "",
+        "testimonial": "",
+        "showVideo": true,
+        "videoSrc": "https://d1yei2z3i6k35z.cloudfront.net/9799259/670ed5cc405e5_VID_230740119_055146_109.mp4",
+        "videoPoster": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf76c07d3_2.png"
+      }
+    ]
   },
   "pricing": {
     "title": "¡Pago único con acceso de por vida!",
-    "price": "$150 USD",
+    "price": "$300 USD",
     "note": "Como se van a estar agregando nuevos módulos constantemente, el precio irá subiendo.",
     "cta": {
       "text": "¡Quiero ingresar ya! Toca aquí",
       "url": "https://wa.me/+5492664034415"
+    },
+    "promotion": {
+      "discountPrice": "$150 USD",
+      "originalPrice": "$300 USD",
+      "endDate": "2025-06-09",
+      "isActive": true
     }
   },
   "instructor": {
     "name": "Juan Cruz Cummaudo",
-    "title": "Fundador de la academia Aprende y Emprende y de JuanConsulting",
+    "title": "Fundador de la academia Cromax Academy y de JuanConsulting",
     "description": "Llevo 2 años dedicándome al Marketing Digital, he ayudado a 5 empresas a conseguir entre 40 a 100 reuniones de ventas calificadas, mejorar sus procesos de captación de clientes y sus embudos de ventas. Te voy a acompañar a que consigas los resultados que tanto esperas, ¡te veo dentro!"
   },
   "faq": {
@@ -131,10 +166,10 @@
     ]
   },
   "footer": {
-    "companyName": "Aprende y Emprende",
-    "email": "contacto@aprendeyemprende.com",
+    "companyName": "Cromax Academy",
+    "email": "contacto@cromax.io",
     "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/juan-cruz-cummaudo"
+      "linkedin": "https://www.linkedin.com/company/cromax"
     }
   }
 }

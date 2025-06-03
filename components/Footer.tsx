@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { FooterSettings } from "../types/content";
 
@@ -13,12 +12,24 @@ const Footer = ({
 }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
+  const handleScrollToSection = (href: string) => {
+    if (href === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navLinks = [
     { name: "Inicio", href: "#" },
-    { name: "Metodología", href: "#methodology" },
-    { name: "Servicios", href: "#services" },
-    { name: "About", href: "#about" },
+    { name: "Beneficios", href: "#beneficios" },
     { name: "Testimonios", href: "#testimonials" },
+    { name: "Precios", href: "#precios" },
+    { name: "FAQ", href: "#faq" },
   ];
 
   return (
@@ -60,12 +71,12 @@ const Footer = ({
             <ul className="flex items-center gap-8">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <Link
-                    href={link.href}
+                  <button
+                    onClick={() => handleScrollToSection(link.href)}
                     className="text-sm text-gray-500 hover:text-[#4188fa] transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -118,12 +129,12 @@ const Footer = ({
             <ul className="flex flex-wrap justify-center gap-5">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <Link
-                    href={link.href}
+                  <button
+                    onClick={() => handleScrollToSection(link.href)}
                     className="text-sm text-gray-500 hover:text-[#4188fa] transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>

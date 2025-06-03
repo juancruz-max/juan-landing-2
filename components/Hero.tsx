@@ -59,7 +59,7 @@ const Hero = ({
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 sm:px-6 lg:px-8 py-2 rounded-full text-sm sm:text-base lg:text-lg font-medium mb-4 sm:mb-6">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-              Aprende y Emprende
+              Cromax Academy
             </div>
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-secondary leading-tight mb-4 sm:mb-6 px-2">

@@ -8,7 +8,7 @@ interface AudienceProps extends AudienceType {}
 
 const Audience = ({ title, points }: AudienceProps) => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="audiencia" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

@@ -71,6 +71,7 @@ export default function Home() {
           price={typedContent.pricing.price}
           note={typedContent.pricing.note}
           cta={typedContent.pricing.cta}
+          promotion={typedContent.pricing.promotion}
         />
       )}
 

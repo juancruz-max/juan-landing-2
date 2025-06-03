@@ -8,7 +8,7 @@ interface InstructorProps extends InstructorType {}
 
 const Instructor = ({ name, title, description }: InstructorProps) => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="instructor" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

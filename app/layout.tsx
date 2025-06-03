@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aprende y Emprende - Academia de Marketing Digital",
+  title: "Cromax Academy - Academia de Marketing Digital",
   description:
     "Aprende desde cero una de las profesiones más rentables para comenzar a generar ingresos por internet. Sin experiencia previa necesaria.",
 };

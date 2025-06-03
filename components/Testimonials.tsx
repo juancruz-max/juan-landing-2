@@ -18,6 +18,9 @@ export default function Testimonials({
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
 
+  // Check if we have video testimonials
+  const hasVideoTestimonials = items && items.some(item => item.videoSrc);
+
   // Early return if no items
   if (!items || items.length === 0) {
     return (
@@ -38,6 +41,74 @@ export default function Testimonials({
               <p className="text-gray-500">Próximamente testimonios de estudiantes...</p>
             </div>
           </motion.div>
+        </div>
+      </section>
+    );
+  }
+
+  // If we have video testimonials, show them in a simple vertical layout
+  if (hasVideoTestimonials) {
+    return (
+      <section id="testimonials" className="py-24 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <motion.div
+            className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              rotate: [0, 45, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+              {title}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
+          </motion.div>
+
+          {/* Video Testimonials */}
+          <div className="max-w-4xl mx-auto space-y-8">
+            {items.filter(item => item.videoSrc).map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="bg-white/60 backdrop-blur-xl border border-white/50 rounded-2xl p-6 shadow-lg"
+              >
+                <div className="aspect-video rounded-lg overflow-hidden">
+                  <video
+                    src={testimonial.videoSrc}
+                    poster={testimonial.videoPoster}
+                    controls
+                    preload="auto"
+                    controlsList="nodownload"
+                    playsInline
+                    webkit-playsinline="true"
+                    x5-playsinline="true"
+                    className="w-full h-full object-cover"
+                  >
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     );

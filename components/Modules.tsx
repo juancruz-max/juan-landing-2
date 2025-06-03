@@ -40,7 +40,7 @@ const getModuleIcon = (index: number) => {
 
 const Modules = ({ title, sections }: ModulesProps) => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="modulos" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

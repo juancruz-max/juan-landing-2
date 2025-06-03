@@ -110,7 +110,7 @@ const getBenefitIcon = (title: string): JSX.Element => {
 
 export default function Benefits({ title, items }: BenefitsProps) {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="beneficios" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

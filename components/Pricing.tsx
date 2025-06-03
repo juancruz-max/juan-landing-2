@@ -5,9 +5,25 @@ import { Pricing as PricingType } from "../types/content";
 
 interface PricingProps extends PricingType {}
 
-const Pricing = ({ title, price, note, cta }: PricingProps) => {
+const Pricing = ({ title, price, note, cta, promotion }: PricingProps) => {
+  // Función para verificar si la promoción está activa
+  const isPromotionActive = () => {
+    if (!promotion || !promotion.isActive) return false;
+
+    const today = new Date();
+    const endDate = new Date(promotion.endDate);
+
+    // Resetear las horas para comparar solo fechas
+    today.setHours(0, 0, 0, 0);
+    endDate.setHours(23, 59, 59, 999);
+
+    return today <= endDate;
+  };
+
+  const showPromotion = isPromotionActive();
+  const displayPrice = showPromotion ? promotion?.discountPrice : price;
   return (
-    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80">
+    <section id="precios" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -64,9 +80,37 @@ const Pricing = ({ title, price, note, cta }: PricingProps) => {
             >
               <div className="text-center">
                 <div className="mb-4 sm:mb-6">
-                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-                    {price}
-                  </span>
+                  {showPromotion && (
+                    <div className="mb-2">
+                      <span className="text-lg sm:text-xl text-gray-500 line-through">
+                        {promotion?.originalPrice}
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+                      {displayPrice}
+                    </span>
+                    {showPromotion && (
+                      <div className="bg-red-500 text-white px-2 py-1 rounded-lg text-xs sm:text-sm font-semibold">
+                        ¡OFERTA!
+                      </div>
+                    )}
+                  </div>
+                  {showPromotion && (
+                    <div className="mt-2">
+                      <span className="text-red-600 text-sm font-medium">
+                        ⏰ Oferta válida hasta el {(() => {
+                          const [year, month, day] = (promotion?.endDate || '').split('-');
+                          const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+                          return date.toLocaleDateString('es-AR', {
+                            day: 'numeric',
+                            month: 'long'
+                          });
+                        })()}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <p className="text-gray-600 mb-6 sm:mb-8 text-xs sm:text-sm px-2">
@@ -82,7 +126,7 @@ const Pricing = ({ title, price, note, cta }: PricingProps) => {
                     href={cta.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block w-full bg-white text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl"
+                    className="inline-block w-full bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl"
                   >
                     {cta.text}
                   </a>

@@ -61,6 +61,8 @@ export interface Testimonial {
   profileUrl: string;
   testimonial?: string;
   showVideo?: boolean;
+  videoSrc?: string;
+  videoPoster?: string;
 }
 
 export interface Testimonials {
@@ -194,6 +196,12 @@ export interface Pricing {
   price: string;
   note: string;
   cta: PricingCTA;
+  promotion?: {
+    discountPrice: string;
+    originalPrice: string;
+    endDate: string; // Formato: YYYY-MM-DD
+    isActive?: boolean;
+  };
 }
 
 export interface Instructor {
