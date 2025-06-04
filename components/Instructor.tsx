@@ -6,6 +6,34 @@ import { Instructor as InstructorType } from "../types/content";
 
 interface InstructorProps extends InstructorType {}
 
+// Function to render text with markdown-like formatting
+const renderFormattedText = (text: string) => {
+  // Split by double newlines to create paragraphs
+  const paragraphs = text.split('\n\n');
+
+  return paragraphs.map((paragraph, index) => {
+    // Process bold text (**text**)
+    const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+
+    return (
+      <div key={index} className={index > 0 ? "mt-4" : ""}>
+        {parts.map((part, partIndex) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            // Remove the ** and make it bold
+            const boldText = part.slice(2, -2);
+            return (
+              <strong key={partIndex} className="font-semibold text-gray-900">
+                {boldText}
+              </strong>
+            );
+          }
+          return part;
+        })}
+      </div>
+    );
+  });
+};
+
 const Instructor = ({ name, title, description }: InstructorProps) => {
   return (
     <section id="instructor" className="py-24 relative overflow-hidden">
@@ -88,9 +116,9 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
                 <p className="text-lg text-primary font-semibold mb-6">
                   {title}
                 </p>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  {description}
-                </p>
+                <div className="text-gray-700 leading-relaxed text-lg">
+                  {renderFormattedText(description)}
+                </div>
               </motion.div>
 
               <motion.div
@@ -101,13 +129,13 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
                 className="mt-8 flex flex-wrap gap-3 justify-center md:justify-start"
               >
                 <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                  Marketing Digital
+                  Especialista en Linkedin
                 </span>
                 <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-                  Prospección B2B
+                  Formador y Coach
                 </span>
                 <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
-                  Consultoría
+                 Escalamiento de negocios B2B
                 </span>
               </motion.div>
             </div>

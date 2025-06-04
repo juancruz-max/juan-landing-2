@@ -6,7 +6,7 @@ import Image from "next/image";
 
 interface AudienceProps extends AudienceType {}
 
-const Audience = ({ title, points }: AudienceProps) => {
+const Audience = ({ title, columns }: AudienceProps) => {
   return (
     <section id="audiencia" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
@@ -51,13 +51,13 @@ const Audience = ({ title, points }: AudienceProps) => {
           </h2>
         </motion.div>
 
-        {/* Imagen y textos */}
+        {/* Imagen y textos - Formato original */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+      /*     className="mb-16" */
         >
           <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 max-w-6xl mx-auto">
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start px-4 sm:px-0">
@@ -72,22 +72,39 @@ const Audience = ({ title, points }: AudienceProps) => {
                 />
               </div>
             </div>
-            <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6 px-4 sm:px-0">
-              {points.map((point, index) => (
+            <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 px-4 sm:px-0">
+              {/* Dos columnas de puntos */}
+              {columns.map((column, columnIndex) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  key={columnIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start gap-3 sm:gap-4"
+                  transition={{ duration: 0.6, delay: 0.2 + columnIndex * 0.1 }}
+                  className="space-y-4 sm:space-y-6"
                 >
-                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-3 h-3 sm:w-5 sm:h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">{point}</p>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">
+                    {column.subtitle}
+                  </h3>
+                  {column.points.map((point, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.3 + columnIndex * 0.1 + index * 0.1 }}
+                      className="flex items-start gap-3 sm:gap-4"
+                    >
+                      <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-primary rounded-full flex items-center justify-center mt-1">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+                        {point}
+                      </p>
+                    </motion.div>
+                  ))}
                 </motion.div>
               ))}
             </div>

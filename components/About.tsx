@@ -3,6 +3,34 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+// Function to render text with markdown-like formatting
+const renderFormattedText = (text: string) => {
+  // Split by double newlines to create paragraphs
+  const paragraphs = text.split('\n\n');
+
+  return paragraphs.map((paragraph, index) => {
+    // Process bold text (**text**)
+    const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+
+    return (
+      <div key={index} className={index > 0 ? "mt-4" : ""}>
+        {parts.map((part, partIndex) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            // Remove the ** and make it bold
+            const boldText = part.slice(2, -2);
+            return (
+              <strong key={partIndex} className="font-semibold text-gray-900">
+                {boldText}
+              </strong>
+            );
+          }
+          return part;
+        })}
+      </div>
+    );
+  });
+};
+
 const About = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden">

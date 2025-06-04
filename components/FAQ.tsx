@@ -6,6 +6,34 @@ import { FAQ as FAQType } from "../types/content";
 
 interface FAQProps extends FAQType {}
 
+// Function to render text with markdown-like formatting
+const renderFormattedText = (text: string) => {
+  // Split by double newlines to create paragraphs
+  const paragraphs = text.split('\n\n');
+
+  return paragraphs.map((paragraph, index) => {
+    // Process bold text (**text**)
+    const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+
+    return (
+      <div key={index} className={index > 0 ? "mt-4" : ""}>
+        {parts.map((part, partIndex) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            // Remove the ** and make it bold
+            const boldText = part.slice(2, -2);
+            return (
+              <strong key={partIndex} className="font-semibold text-gray-900">
+                {boldText}
+              </strong>
+            );
+          }
+          return part;
+        })}
+      </div>
+    );
+  });
+};
+
 const FAQ = ({ title, items }: FAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -201,15 +229,15 @@ const FAQ = ({ title, items }: FAQProps) => {
                         exit={{ opacity: 0, height: 0, scale: 0.95 }}
                         transition={{ duration: 0.3, type: "spring" }}
                       >
-                        <motion.p
+                        <motion.div
                           className="mt-4 text-sm md:text-base text-gray-800 md:text-gray-600 bg-white/80 md:bg-white/30 backdrop-blur-md rounded-xl p-4 border border-white/20"
                           initial={{ y: 20 }}
                           animate={{ y: 0 }}
                           exit={{ y: 20 }}
                           transition={{ duration: 0.3 }}
                         >
-                          {faq.answer}
-                        </motion.p>
+                          {renderFormattedText(faq.answer)}
+                        </motion.div>
                       </motion.div>
                     )}
                   </AnimatePresence>

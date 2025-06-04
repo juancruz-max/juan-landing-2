@@ -6,6 +6,18 @@ import Image from "next/image";
 
 interface ExtrasProps extends ExtrasType {}
 
+// Function to render text with paragraph separation
+const renderFormattedText = (text: string) => {
+  // Split by double newlines to create paragraphs
+  const paragraphs = text.split('\n\n');
+
+  return paragraphs.map((paragraph, index) => (
+    <p key={index} className={index > 0 ? "mt-4" : ""}>
+      {paragraph}
+    </p>
+  ));
+};
+
 const getExtraImage = (index: number) => {
   const images = [
     "/comunidad exclusiva.png",
@@ -109,9 +121,9 @@ const Extras = ({ title, items }: ExtrasProps) => {
                   <h3 className="text-xl font-semibold mb-4 text-gray-800">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {item.description}
-                  </p>
+                  <div className="text-gray-600 leading-relaxed text-left">
+                    {renderFormattedText(item.description)}
+                  </div>
                 </div>
               </motion.div>
             </motion.div>

@@ -26,11 +26,19 @@ export default function Home() {
         ctaLink={typedContent.hero.ctaLink}
       />
 
+       {/* Testimonials */}
+      <Testimonials
+        title={typedContent.testimonials.title}
+        subtitle={typedContent.testimonials.subtitle}
+        viewText={typedContent.testimonials.viewText}
+        items={typedContent.testimonials.items}
+      />
+
       {/* Target Audience */}
       {typedContent.audience && (
         <Audience
           title={typedContent.audience.title}
-          points={typedContent.audience.points}
+          columns={typedContent.audience.columns}
         />
       )}
 
@@ -55,14 +63,6 @@ export default function Home() {
           items={typedContent.extras.items}
         />
       )}
-
-      {/* Testimonials */}
-      <Testimonials
-        title={typedContent.testimonials.title}
-        subtitle={typedContent.testimonials.subtitle}
-        viewText={typedContent.testimonials.viewText}
-        items={typedContent.testimonials.items}
-      />
 
       {/* Pricing */}
       {typedContent.pricing && (

@@ -161,9 +161,14 @@ export interface AudiencePoint {
   text: string;
 }
 
+export interface AudienceColumn {
+  subtitle: string;
+  points: string[];
+}
+
 export interface Audience {
   title: string;
-  points: string[];
+  columns: AudienceColumn[];
 }
 
 export interface ModuleSection {
