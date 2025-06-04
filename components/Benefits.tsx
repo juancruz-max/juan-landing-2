@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 interface Benefit {
   icon: string;
@@ -147,14 +146,18 @@ export default function Benefits({ title, items }: BenefitsProps) {
         >
           <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 max-w-6xl mx-auto">
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start px-4 sm:px-0">
-              <div className="relative max-w-sm sm:max-w-md lg:max-w-lg">
-                <Image
-                  src="/sabes que lograras con aprende y emprende.png"
-                  alt={title}
-                  width={400}
-                  height={600}
+              <div className="relative max-w-sm sm:max-w-md lg:max-w-sm">
+                <video
+                  src="/content.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="rounded-xl sm:rounded-2xl shadow-lg w-full h-auto"
-                />
+ /*                  style={{ maxHeight: '600px' }} */
+                >
+                  Tu navegador no soporta el elemento de video.
+                </video>
               </div>
             </div>
             <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6 px-4 sm:px-0">
