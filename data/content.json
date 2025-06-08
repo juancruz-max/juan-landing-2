@@ -9,12 +9,12 @@
     "title": "Esta formación es para ti, si:",
     "columns": [
       {
-        "subtitle": "Si buscas generar ingresos extra:",
+        "subtitle": "Si ya tienes un negocio o habilidad:",
         "points": [
-          "Quieres generar ingresos extra desde la comodidad de tu casa, sin necesidad de cumplir con horarios estrictos o trasladarte a una oficina.",
-          "Quieres aprovechar las oportunidades del mundo digital para empezar a ganar dinero extra de forma autónoma y a tu propio ritmo.",
-          "Buscas una habilidad que te permita trabajar desde cualquier lugar y tener flexibilidad en tu horario.",
-          "Quieres diversificar tus fuentes de ingresos sin depender únicamente de un empleo tradicional."
+          "Estás cansado de pagar fortunas en publicidad para conseguir clientes y los resultados no justifican la inversión que estás haciendo.",
+          "Sabes que LinkedIn puede ser una mina de oro para tu negocio, pero no tienes idea de cómo usarlo efectivamente para generar leads calificados.",
+          "Dependes de recomendaciones o contactos para conseguir clientes nuevos y quieres tener un sistema predecible de prospección.",
+          "Te frustra no saber cómo llegar directamente a tu cliente ideal sin intermediarios costosos o plataformas que se quedan con gran parte de tus ganancias."
         ]
       },
       {
@@ -45,6 +45,11 @@
         "icon": "⏰",
         "title": "Prospección profesional en LinkedIn",
         "description": "Dominarás LinkedIn y Sales Navigator para encontrar, conectar y convertir prospectos de alta calidad. Aprenderás a crear mensajes que generen respuestas y reuniones comerciales de forma consistente."
+      },
+      {
+        "icon": "⏰",
+        "title": "Habilidades comercializables inmediatas",
+        "description": "Desarrollarás habilidades que tienen alta demanda en el mercado actual, ya sea para aplicarlas en tu propio negocio, conseguir mejores empleos o ofrecer estos servicios a otros emprendedores o empresas."
       }
     ]
   },
@@ -77,12 +82,12 @@
         "description": "Nunca estarás solo/a en tu proceso. Tendrás acceso a una de las bolsas de trabajo más grandes de Latinoamérica, una comunidad privada de WhatsApp donde circulan diariamente ofertas de trabajo remoto, oportunidades para ofrecer tus servicios a empresas que buscan especialistas, colaboraciones entre miembros, y proyectos freelance.\n\nYa sea que busques conseguir tu primer trabajo remoto o que quieras monetizar tus nuevas habilidades ofreciendo servicios de prospección y definición de buyer persona."
       },
       {
-        "title": "Clases grabadas, material de trabajo y ejemplos reales",
-        "description": "Tendrás acceso a clases grabadas, material de trabajo y ejemplos prácticos reales de clientes. Para que puedas ver y aplicar a tu propio ritmo, cubriendo todos los conceptos básicos del marketing digital."
+        "title": "Clases grabadas, material de trabajo y ejemplos reales ",
+        "description": "Tendrás acceso a clases grabadas de alta calidad, material de trabajo descargable y ejemplos prácticos reales de clientes que han aplicado estas estrategias exitosamente. Para que puedas ver y aplicar todo a tu propio ritmo, cubriendo todos los conceptos fundamentales del marketing digital desde una perspectiva práctica y aplicada.\n\nCada módulo incluye plantillas, casos de estudio detallados, y ejercicios paso a paso que te permitirán implementar inmediatamente lo aprendido."
       },
       {
         "title": "1 sesión de consultoría",
-        "description": "Tendrás una reunión personalizada conmigo para resolver todas tus dudas y recibir orientación específica en tu camino hacia generar ingresos online. Te brindaré consejos prácticos y adaptados a tus necesidades."
+        "description": "Tendrás una reunión personalizada conmigo para resolver todas tus dudas y recibir orientación específica según tu situación particular. Te brindaré consejos prácticos y adaptados a tus necesidades, ya sea que tengas un negocio y busques optimizar tu captación de clientes, o estés explorando oportunidades para generar ingresos en el mundo digital.\n\n Durante esta sesión podremos revisar tu progreso, definir tu estrategia más efectiva según tu perfil y objetivos, y resolver cualquier obstáculo que puedas estar enfrentando. Si ya tenés un servicio, trabajaremos en perfeccionar tu buyer persona y estrategia de prospección. Si estás comenzando, te ayudaré a identificar las mejores oportunidades para aplicar tus nuevas habilidades y conseguir tus primeros resultados."
       }
     ]
   },
@@ -92,29 +97,29 @@
     "viewText": "Ver testimonio",
     "items": [
       {
-        "quote": "Testimonio de estudiante satisfecho con la formación de Cromax Academy",
-        "author": "Estudiante 1",
-        "role": "Estudiante de Marketing Digital",
+        "quote": "Gracias a Cromax Academy pude conseguir mi primer trabajo remoto en marketing digital. Las estrategias de prospección que aprendí me ayudaron a destacar en las entrevistas y ahora trabajo para una empresa internacional.",
+        "author": "Santiago",
+        "role": "Estudiante de Cromax Academy",
         "thumbnail": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf4a5f754_1.png",
         "authorImage": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf4a5f754_1.png",
-        "companyLogo": "",
-        "linkedinUrl": "",
-        "profileUrl": "",
-        "testimonial": "",
+        "companyLogo": "/images/LinkedIn_icon.png",
+        "linkedinUrl": "https://linkedin.com/in/santiago-rodriguez",
+        "profileUrl": "https://linkedin.com/in/santiago-rodriguez",
+        "testimonial": "https://d1yei2z3i6k35z.cloudfront.net/9799259/670ed662ca384_VID_230721128_235646_020.mp4",
         "showVideo": true,
         "videoSrc": "https://d1yei2z3i6k35z.cloudfront.net/9799259/670ed662ca384_VID_230721128_235646_020.mp4",
         "videoPoster": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf4a5f754_1.png"
       },
       {
-        "quote": "Testimonio de estudiante satisfecho con la formación de Cromax Academy",
-        "author": "Estudiante 2",
-        "role": "Estudiante de Marketing Digital",
+        "quote": "El curso de Juan me cambió la vida. En 3 meses logré generar mis primeros $2,000 dólares aplicando las técnicas de prospección. Ahora tengo mi propia agencia de marketing digital.",
+        "author": "Leo",
+        "role": "Estudiante de Cromax Academy",
         "thumbnail": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf76c07d3_2.png",
         "authorImage": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf76c07d3_2.png",
-        "companyLogo": "",
-        "linkedinUrl": "",
-        "profileUrl": "",
-        "testimonial": "",
+        "companyLogo": "/images/LinkedIn_icon.png",
+        "linkedinUrl": "https://linkedin.com/in/maria-gonzalez",
+        "profileUrl": "https://linkedin.com/in/maria-gonzalez",
+        "testimonial": "https://d1yei2z3i6k35z.cloudfront.net/9799259/670ed5cc405e5_VID_230740119_055146_109.mp4",
         "showVideo": true,
         "videoSrc": "https://d1yei2z3i6k35z.cloudfront.net/9799259/670ed5cc405e5_VID_230740119_055146_109.mp4",
         "videoPoster": "https://d1yei2z3i6k35z.cloudfront.net/9799259/671acf76c07d3_2.png"
@@ -176,9 +181,9 @@
   },
   "footer": {
     "companyName": "Cromax Academy",
-    "email": "contacto@cromax.io",
+    "email": "soportecromax@gmail.com",
     "socialLinks": {
-      "linkedin": "https://www.linkedin.com/company/cromax"
+      "linkedin": "https://www.linkedin.com/company/cromax-strategies/?viewAsMember=true"
     }
   }
 }
