@@ -14,7 +14,7 @@ export default function Testimonials({
   items,
 }: TestimonialsProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
   const [direction, setDirection] = useState(0);
 
   // Early return if no items
@@ -201,13 +201,15 @@ export default function Testimonials({
                             Tu navegador no soporta el elemento de video.
                           </video>
                         ) : (
-                          <Image
-                            src={items[index].thumbnail}
-                            alt={`Testimonio de ${items[index].author}`}
-                            fill
-                            className="object-contain bg-white"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          />
+                          <div className="relative w-full h-full overflow-hidden">
+                            <Image
+                              src={items[index].authorImage}
+                              alt={`Testimonio de ${items[index].author}`}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
+                          </div>
                         )}
                       </div>
 
