@@ -185,23 +185,25 @@ export default function Testimonials({
                   >
                     <div className="bg-white/60 backdrop-blur-xl border border-white/50 rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg h-full flex flex-col">
                       {/* Video */}
-                      <div className="aspect-video rounded-lg overflow-hidden mb-3 md:mb-4">
+                      <div className="rounded-lg overflow-hidden mb-3 md:mb-4 bg-black/5">
                         {items[index].videoSrc ? (
-                          <video
-                            src={items[index].videoSrc}
-                            poster={items[index].videoPoster}
-                            controls
-                            preload="auto"
-                            controlsList="nodownload"
-                            playsInline
-                            webkit-playsinline="true"
-                            x5-playsinline="true"
-                            className="w-full h-full object-cover"
-                          >
-                            Tu navegador no soporta el elemento de video.
-                          </video>
+                          <div className="relative w-full" style={{ aspectRatio: '16/9', minHeight: '200px' }}>
+                            <video
+                              src={items[index].videoSrc}
+                              poster={items[index].videoPoster}
+                              controls
+                              preload="auto"
+                              controlsList="nodownload"
+                              playsInline
+                              webkit-playsinline="true"
+                              x5-playsinline="true"
+                              className="w-full h-full object-contain"
+                            >
+                              Tu navegador no soporta el elemento de video.
+                            </video>
+                          </div>
                         ) : (
-                          <div className="relative w-full h-full overflow-hidden">
+                          <div className="relative aspect-video w-full overflow-hidden">
                             <Image
                               src={items[index].authorImage}
                               alt={`Testimonio de ${items[index].author}`}
