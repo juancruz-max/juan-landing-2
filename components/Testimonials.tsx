@@ -233,31 +233,39 @@ export default function Testimonials({
                                 />
                               </div>
                               <div className="min-w-0 flex-1">
-                                <a
-                                  href={items[index].profileUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-semibold text-gray-800 text-sm md:text-base lg:text-lg truncate"
-                                >
-                                  {items[index].author}
-                                </a>
+                                {items[index].profileUrl ? (
+                                  <a
+                                    href={items[index].profileUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-semibold text-gray-800 text-sm md:text-base lg:text-lg truncate hover:text-blue-600 transition-colors"
+                                  >
+                                    {items[index].author}
+                                  </a>
+                                ) : (
+                                  <span className="font-semibold text-gray-800 text-sm md:text-base lg:text-lg truncate">
+                                    {items[index].author}
+                                  </span>
+                                )}
                                 <div className="flex items-center gap-2">
                                   <p className="text-xs sm:text-sm text-gray-600 truncate">
                                     {items[index].role}
                                   </p>
-                                  <Link
-                                    href={items[index].linkedinUrl}
-                                    target="_blank"
-                                    className="relative w-12 h-3 sm:w-14 sm:h-3.5 md:w-16 md:h-4 flex-shrink-0"
-                                  >
-                                    <Image
-                                      src={items[index].companyLogo}
-                                      alt={`${items[index].author} Company Logo`}
-                                      fill
-                                      className="object-contain"
-                                      sizes="64px"
-                                    />
-                                  </Link>
+                                  {items[index].linkedinUrl && (
+                                    <Link
+                                      href={items[index].linkedinUrl}
+                                      target="_blank"
+                                      className="relative w-12 h-3 sm:w-14 sm:h-3.5 md:w-16 md:h-4 flex-shrink-0"
+                                    >
+                                      <Image
+                                        src={items[index].companyLogo}
+                                        alt={`${items[index].author} Company Logo`}
+                                        fill
+                                        className="object-contain"
+                                        sizes="64px"
+                                      />
+                                    </Link>
+                                  )}
                                 </div>
                               </div>
                             </div>
