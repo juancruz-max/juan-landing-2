@@ -164,7 +164,7 @@ export default function Benefits({ title, items }: BenefitsProps) {
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start px-4 sm:px-0">
               <div className="relative max-w-sm sm:max-w-md lg:max-w-sm">
                 <video
-                  src="/content.mov"
+                  src="/content.mp4"
                   autoPlay
                   muted
                   loop
