@@ -89,12 +89,16 @@ const Hero = ({
                 <video
                   className="w-full h-auto rounded-xl sm:rounded-2xl"
                   controls
-                  preload="metadata"
+                  preload="auto"
                   autoPlay
                   muted
                   playsInline
+                  controlsList="nodownload"
+                  poster="https://d1yei2z3i6k35z.cloudfront.net/9799259/684638bac781f_CromaxAcademy-Presentacion.jpg"
+                  webkit-playsinline="true"
+                  x5-playsinline="true"
                 >
-                  <source src="https://d1yei2z3i6k35z.cloudfront.net/9799259/671d46cc35eff_10242.mp4" type="video/mp4" />
+                  <source src="https://d1yei2z3i6k35z.cloudfront.net/9799259/6846370454710_VSLACEDEMYCROMAX.mp4" type="video/mp4" />
                   Tu navegador no soporta el elemento de video.
                 </video>
 
