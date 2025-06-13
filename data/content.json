@@ -91,6 +91,55 @@
       }
     ]
   },
+  "recapitulacion": {
+    "title": "Recapitulando todo lo que vas a llevar",
+    "subtitle": "Un valor total de $2,197 por solo $300",
+    "modules": [
+      {
+        "title": "Definición de tu cliente ideal desde cero",
+        "price": 200,
+        "description": "Aprenderás paso a paso cómo identificar y definir a tu cliente ideal, de manera que puedas enfocar tus esfuerzos de manera efectiva y maximizar tus resultados en menos tiempo."
+      },
+      {
+        "title": "Dominio de LinkedIn e Instagram para prospección",
+        "price": 300,
+        "description": "Especialízate en las técnicas más efectivas de prospección en LinkedIn e Instagram. Aprenderás a conectar con las personas adecuadas y generar conversaciones que te lleven a oportunidades de negocio."
+      },
+      {
+        "title": "Gestión de CRM para optimizar tus clientes",
+        "price": 200,
+        "description": "Te convertirás en un experto en el manejo de CRM, entendiendo cómo gestionar la información de tus prospectos y automatizar procesos para aumentar tu productividad."
+      },
+      {
+        "title": "Estrategias de Email Marketing que generan resultados",
+        "price": 300,
+        "description": "Aprenderás a crear campañas de email marketing efectivas, con ejemplos prácticos y reales, para generar interés en tus clientes y convertirlos en ventas recurrentes."
+      }
+    ],
+    "extras": [
+      {
+        "title": "Comunidad Exclusiva de Oportunidades",
+        "price": 97,
+        "description": "Acceso a una comunidad privada de WhatsApp con ofertas de trabajo remoto, oportunidades de colaboración y proyectos freelance."
+      },
+      {
+        "title": "Clases grabadas y material de trabajo",
+        "price": 400,
+        "description": "Acceso a clases grabadas de alta calidad, material descargable y ejemplos prácticos reales de clientes exitosos."
+      },
+      {
+        "title": "1 sesión de consultoría personalizada",
+        "price": 200,
+        "description": "Reunión personalizada para resolver dudas y recibir orientación específica según tu situación particular."
+      }
+    ],
+    "totalPrice": 2197,
+    "finalPrice": 300,
+    "cta": {
+      "text": "¡Quiero acceder a todo esto por $300!",
+      "url": "https://wa.me/+5492664034415"
+    }
+  },
   "testimonials": {
     "title": "¿Qué dicen mis alumnos sobre esta formación?",
     "subtitle": "Testimonios de estudiantes satisfechos que han transformado sus vidas gracias a Cromax Academy.",
@@ -203,12 +252,6 @@
     "cta": {
       "text": "¡Quiero ingresar ya! Toca aquí",
       "url": "https://wa.me/+5492664034415"
-    },
-    "promotion": {
-      "discountPrice": "$150 USD",
-      "originalPrice": "$300 USD",
-      "endDate": "2025-06-09",
-      "isActive": true
     }
   },
   "instructor": {
@@ -231,19 +274,19 @@
         "question": "¿Qué obtendré si me inscribo ahora?",
         "answer": "Al inscribirte hoy, tendrás acceso a todos los beneficios del curso, incluyendo:\n\n**Acceso completo al sistema:** Todos los módulos disponibles cubriendo desde mentalidad emprendedora hasta implementación técnica de prospección\n\n**Material práctico listo para usar:** Plantillas, secuencias de mensajes probadas y ejemplos reales de campañas exitosas\n\n**Comunidad exclusiva:** Acceso a una de las bolsas de trabajo más grandes de Latinoamérica con oportunidades diarias\n\n**1 sesión de consultoría personalizada** conmigo para resolver dudas específicas y personalizar tu estrategia\n\n**Acceso de por vida:** Incluye todos los módulos futuros y actualizaciones sin costo adicional"
       },
-        {
+      {
         "question": "No soy muy tecnológico, ¿podré seguir el curso sin problemas?",
         "answer": "Absolutamente. Explico cada herramienta y técnica de manera sencilla y paso a paso. Además, las clases incluyen ejemplos prácticos que puedes seguir fácilmente. Si te surge alguna duda, siempre tendrás acceso a la comunidad y al soporte para resolverla."
       },
-        {
+      {
         "question": "¿Qué tipo de soporte tengo si me quedo atascado en algún tema?",
         "answer": "Contarás con acceso a mi Whatsapp personal, donde puedes hacer preguntas y compartir tus dudas. Además, tendras 1 sesion de consultoría conmigo y el material que está preparado para que puedas revisarlo tantas veces como necesites. No te quedarás solo, siempre habrá apoyo disponible."
       },
-        {
+      {
         "question": "¿Qué métodos de pago puedo usar?",
         "answer": "Los pagos disponibles son por: Binance o DolarApp (pago en dolar) Transferencias (pago en pesos argentinos) Efectivo (pago en pesos argentinos)"
       },
-       {
+      {
         "question": "¿Cuánto tiempo tendré acceso al contenido del curso?",
         "answer": "Tendrás acceso al contenido de forma indefinida. Podrás volver a ver las clases y consultar el material siempre que lo necesites, sin límites de tiempo. Esto te permitirá aprender a tu ritmo y repasar cualquier tema cuando lo consideres necesario."
       }

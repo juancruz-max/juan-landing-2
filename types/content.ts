@@ -215,12 +215,32 @@ export interface Instructor {
   description: string;
 }
 
+export interface RecapitulacionItem {
+  title: string;
+  price: number;
+  description: string;
+}
+
+export interface Recapitulacion {
+  title: string;
+  subtitle: string;
+  modules: RecapitulacionItem[];
+  extras: RecapitulacionItem[];
+  totalPrice: number;
+  finalPrice: number;
+  cta: {
+    text: string;
+    url: string;
+  };
+}
+
 export interface Content {
   hero: Hero;
   audience?: Audience;
   benefits: Benefits;
   modules?: Modules;
   extras?: Extras;
+  recapitulacion?: Recapitulacion;
   testimonials: Testimonials;
   pricing?: Pricing;
   instructor?: Instructor;

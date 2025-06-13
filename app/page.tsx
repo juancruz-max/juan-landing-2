@@ -10,6 +10,7 @@ import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import Instructor from "../components/Instructor";
 import FAQ from "../components/FAQ";
+import Recapitulacion from "../components/Recapitulacion";
 import content from "@/data/content.json";
 import { Content } from "../types/content";
 
@@ -26,7 +27,7 @@ export default function Home() {
         ctaLink={typedContent.hero.ctaLink}
       />
 
-       {/* Testimonials */}
+      {/* Testimonials */}
       <Testimonials
         title={typedContent.testimonials.title}
         subtitle={typedContent.testimonials.subtitle}
@@ -64,14 +65,16 @@ export default function Home() {
         />
       )}
 
-      {/* Pricing */}
-      {typedContent.pricing && (
-        <Pricing
-          title={typedContent.pricing.title}
-          price={typedContent.pricing.price}
-          note={typedContent.pricing.note}
-          cta={typedContent.pricing.cta}
-          promotion={typedContent.pricing.promotion}
+      {/* Recapitulacion */}
+      {typedContent.recapitulacion && (
+        <Recapitulacion
+          title={typedContent.recapitulacion.title}
+          subtitle={typedContent.recapitulacion.subtitle}
+          modules={typedContent.recapitulacion.modules}
+          extras={typedContent.recapitulacion.extras}
+          totalPrice={typedContent.recapitulacion.totalPrice}
+          finalPrice={typedContent.recapitulacion.finalPrice}
+          cta={typedContent.recapitulacion.cta}
         />
       )}
 
@@ -81,6 +84,16 @@ export default function Home() {
           name={typedContent.instructor.name}
           title={typedContent.instructor.title}
           description={typedContent.instructor.description}
+        />
+      )}
+
+      {/* Pricing */}
+      {typedContent.pricing && (
+        <Pricing
+          title={typedContent.pricing.title}
+          price={typedContent.pricing.price}
+          note={typedContent.pricing.note}
+          cta={typedContent.pricing.cta}
         />
       )}
 
@@ -99,8 +112,18 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
           >
             {typedContent.hero.cta}
-            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </motion.a>
         </div>
