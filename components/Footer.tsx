@@ -40,7 +40,7 @@ const Footer = ({
           {/* Logo y LinkedIn */}
           <div className="flex items-center">
             <Image
-              src="/cromax.png"
+              src="/logo.jpeg"
               alt="Cromax"
               width={32}
               height={32}
@@ -98,7 +98,7 @@ const Footer = ({
           {/* Logo y LinkedIn */}
           <div className="flex items-center justify-center mb-6">
             <Image
-              src="/cromax.png"
+              src="/logo.jpeg"
               alt="Cromax"
               width={32}
               height={32}

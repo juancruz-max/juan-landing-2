@@ -80,7 +80,7 @@ const About = () => {
               className="relative h-[400px] rounded-xl overflow-hidden"
             >
               <Image
-                src="/cromax.png"
+                src="/logo.jpeg"
                 alt="Cromax"
                 fill
                 style={{ objectFit: "contain" }}

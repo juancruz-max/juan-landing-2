@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     description: "Aprende desde cero una de las profesiones más rentables para comenzar a generar ingresos por internet. Sin experiencia previa necesaria.",
     images: [
       {
-        url: "/cromax.png",
+        url: "/logo-preview.jpg",
         width: 1200,
         height: 630,
         alt: "Cromax Academy - Academia de Marketing Digital",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     creator: "@cromax_academy",
     title: "Cromax Academy - Academia de Marketing Digital",
     description: "Aprende desde cero una de las profesiones más rentables para comenzar a generar ingresos por internet. Sin experiencia previa necesaria.",
-    images: ["/cromax.png"],
+    images: ["/logo-preview.jpg"],
   },
 
   // Meta tags adicionales
