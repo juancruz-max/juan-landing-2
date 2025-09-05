@@ -91,6 +91,50 @@
       }
     ]
   },
+  "expertModules": {
+    "title": "Bonos Extra por entrar ahora",
+    "subtitle": "Además de todo lo anterior, también accederás a estos módulos exclusivos de expertos:",
+    "experts": [
+      {
+        "name": "Facundo Tomba",
+        "title": "Renace: Libre de Límites",
+        "location": "Buenos Aires, Argentina",
+        "image": "/images/facundo.jpeg",
+        "bio": "+5 años especializándose en desarrollo humano, ayudando a cientos de emprendedores a conseguir sus resultados y conectar con su propósito. Fundador de una de las bolsas de trabajo más grandes de Latinoamérica.",
+        "learningPoints": [
+          "Dejar de autosabotearte definitivamente",
+          "Reprogramar creencias que te frenan",
+          "Pasar de \"sé qué hacer pero no lo hago\" a \"lo hago aunque incomode\"",
+          "Identificar y desenmascarar tus sabotajes",
+          "Activar una nueva identidad para alcanzar tu mejor versión",
+          "Desarrollar confianza inquebrantable en ti mismo",
+          "Crear hábitos que te impulsen hacia el éxito"
+        ],
+        "finalNote": "Curso práctico y vivencial: PNL + coaching + dinámicas guiadas.",
+        "highlights": ["\"Si no pasa por el cuerpo, no cuenta\""]
+      },
+      {
+        "name": "Daniel Planas",
+        "title": "Módulo 'ABC de las Ventas'",
+        "location": "Ciudad de México, México",
+        "image": "/images/daniel.jpeg",
+        "bio": "Consultor, conferencista y mentor con más de 15 años de experiencia en ventas y desarrollo de negocios. Ha combinado su trayectoria en ventas B2B de tecnología, con una sólida formación en desarrollo humano y meditación, lo que le ha permitido crear un estilo único de ventas basado en confianza, propósito y resultados.",
+        "learningPoints": [
+          "Definir tu misión, valores y talentos como vendedor",
+          "Conectar con tu cliente ideal y generar confianza auténtica",
+          "Dominar el proceso completo de ventas: prospección, presentación y cierre",
+          "Manejar objeciones con seguridad y convertirlas en oportunidades",
+          "Aplicar técnicas de cierre simples y avanzadas para distintos escenarios",
+          "Usar herramientas digitales (CRM, redes sociales, funnels) para vender mejor",
+          "Preparar y dar un pitch convincente frente a clientes o inversionistas"
+        ],
+        "finalNote": "Curso práctico y aplicable: Ventas + Cierres + Herramientas digitales.",
+        "highlights": [
+          "\"tanto si nunca has vendido, como si ya vendes y quieres cerrar más y mejor\""
+        ]
+      }
+    ]
+  },
   "recapitulacion": {
     "title": "Recapitulando todo lo que vas a llevar",
     "subtitle": "Un valor total de $2,197 por solo $300",
@@ -135,6 +179,8 @@
     ],
     "totalPrice": 2197,
     "finalPrice": 300,
+    "futurePrice": 500,
+    "priceNote": "Como se van a estar agregando nuevos módulos constantemente, el precio irá subiendo.",
     "cta": {
       "text": "¡Quiero acceder a todo esto por $300!",
       "url": "https://wa.me/+5492664034415"
@@ -249,6 +295,14 @@
     "title": "¡Pago único con acceso de por vida!",
     "price": "$300 USD",
     "note": "Como se van a estar agregando nuevos módulos constantemente, el precio irá subiendo.",
+    "limitedOffer": {
+      "remainingSpots": 5,
+      "currentPrice": "$300 USD",
+      "futurePrice": "$500 USD",
+      "originalPrice": "$2,197 USD",
+      "urgencyText": "🔥 Últimos 5 cupos disponibles",
+      "isActive": true
+    },
     "cta": {
       "text": "¡Quiero ingresar ya! Toca aquí",
       "url": "https://wa.me/+5492664034415"

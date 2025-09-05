@@ -191,6 +191,23 @@ export interface Extras {
   items: ExtraItem[];
 }
 
+export interface ExpertModule {
+  name: string;
+  title: string;
+  location: string;
+  image: string;
+  bio: string;
+  learningPoints: string[];
+  finalNote: string;
+  highlights?: string[];
+}
+
+export interface ExpertModules {
+  title: string;
+  subtitle?: string;
+  experts: ExpertModule[];
+}
+
 export interface PricingCTA {
   text: string;
   url: string;
@@ -198,13 +215,15 @@ export interface PricingCTA {
 
 export interface Pricing {
   title: string;
-  price: string;
+  price?: string;
   note: string;
   cta: PricingCTA;
-  promotion?: {
-    discountPrice: string;
+  limitedOffer?: {
+    remainingSpots: number;
+    currentPrice: string;
+    futurePrice: string;
     originalPrice: string;
-    endDate: string; // Formato: YYYY-MM-DD
+    urgencyText: string;
     isActive?: boolean;
   };
 }
@@ -228,6 +247,8 @@ export interface Recapitulacion {
   extras: RecapitulacionItem[];
   totalPrice: number;
   finalPrice: number;
+  futurePrice?: number;
+  priceNote?: string;
   cta: {
     text: string;
     url: string;
@@ -240,6 +261,7 @@ export interface Content {
   benefits: Benefits;
   modules?: Modules;
   extras?: Extras;
+  expertModules?: ExpertModules;
   recapitulacion?: Recapitulacion;
   testimonials: Testimonials;
   pricing?: Pricing;

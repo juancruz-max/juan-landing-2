@@ -26,6 +26,8 @@ const Recapitulacion = ({
   extras,
   totalPrice,
   finalPrice,
+  futurePrice,
+  priceNote,
   cta,
 }: RecapitulacionProps) => {
   return (
@@ -174,7 +176,7 @@ const Recapitulacion = ({
                 ${totalPrice}
               </span>
             </div>
-            <div className="mb-6">
+            <div className="mb-4">
               <span className="block text-lg text-white/90 mb-2 font-semibold tracking-wide">
                 Hoy accedés a todo por solo
               </span>
@@ -182,6 +184,19 @@ const Recapitulacion = ({
                 ${finalPrice}
               </span>
             </div>
+
+            {futurePrice && (
+              <div className="mb-4">
+                <span className="block text-sm text-white/70 mb-1">
+                  Precio después: <span className="line-through">${futurePrice}</span>
+                </span>
+                {priceNote && (
+                  <span className="block text-xs text-white/60 italic">
+                    {priceNote}
+                  </span>
+                )}
+              </div>
+            )}
             <motion.a
               href={cta.url}
               target="_blank"

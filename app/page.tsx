@@ -6,6 +6,7 @@ import Audience from "../components/Audience";
 import Benefits from "../components/Benefits";
 import Modules from "../components/Modules";
 import Extras from "../components/Extras";
+import ExpertModules from "../components/ExpertModules";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import Instructor from "../components/Instructor";
@@ -65,6 +66,15 @@ export default function Home() {
         />
       )}
 
+      {/* Expert Modules */}
+      {typedContent.expertModules && (
+        <ExpertModules
+          title={typedContent.expertModules.title}
+          subtitle={typedContent.expertModules.subtitle}
+          experts={typedContent.expertModules.experts}
+        />
+      )}
+
       {/* Recapitulacion */}
       {typedContent.recapitulacion && (
         <Recapitulacion
@@ -74,6 +84,8 @@ export default function Home() {
           extras={typedContent.recapitulacion.extras}
           totalPrice={typedContent.recapitulacion.totalPrice}
           finalPrice={typedContent.recapitulacion.finalPrice}
+          futurePrice={typedContent.recapitulacion.futurePrice}
+          priceNote={typedContent.recapitulacion.priceNote}
           cta={typedContent.recapitulacion.cta}
         />
       )}
@@ -91,9 +103,9 @@ export default function Home() {
       {typedContent.pricing && (
         <Pricing
           title={typedContent.pricing.title}
-          price={typedContent.pricing.price}
           note={typedContent.pricing.note}
           cta={typedContent.pricing.cta}
+          limitedOffer={typedContent.pricing.limitedOffer}
         />
       )}
 

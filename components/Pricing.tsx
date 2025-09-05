@@ -5,7 +5,7 @@ import { Pricing as PricingType } from "../types/content";
 
 interface PricingProps extends PricingType {}
 
-const Pricing = ({ title, price, note, cta }: PricingProps) => {
+const Pricing = ({ title, note, cta, limitedOffer }: PricingProps) => {
   return (
     <section
       id="precios"
@@ -66,17 +66,62 @@ const Pricing = ({ title, price, note, cta }: PricingProps) => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="text-center">
+                {/* Badge de urgencia */}
+                {limitedOffer?.isActive && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-bold mb-4 sm:mb-6 shadow-lg"
+                  >
+                    <motion.span
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      🔥
+                    </motion.span>
+                    {limitedOffer.urgencyText}
+                  </motion.div>
+                )}
+
                 <div className="mb-4 sm:mb-6">
-                  <div className="mb-2">
+                  {/* Precio original */}
+                  <div className="mb-4">
                     <span className="text-lg sm:text-xl text-gray-500 line-through">
-                      $2,197 USD
+                      {limitedOffer?.originalPrice || "$2,197 USD"}
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-                      {price}
-                    </span>
+
+                  {/* Precio actual destacado */}
+                  <div className="flex flex-col items-center justify-center gap-2 mb-3">
+                    {limitedOffer?.isActive && (
+                      <motion.div
+                        animate={{ scale: [1, 1.05, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-lg text-sm font-bold"
+                      >
+                        AHORA
+                      </motion.div>
+                    )}
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+                        $300
+                      </span>
+                      <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+                        USD
+                      </span>
+                    </div>
                   </div>
+
+                  {/* Precio futuro - después del precio actual */}
+                  {limitedOffer?.isActive && (
+                    <div className="mb-2">
+                      <span className="text-sm sm:text-base text-gray-400 line-through">
+                        Precio después: {limitedOffer.futurePrice}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <p className="text-gray-600 mb-6 sm:mb-8 text-xs sm:text-sm px-2">

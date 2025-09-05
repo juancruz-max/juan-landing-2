@@ -116,10 +116,15 @@ export default function TestimonialsEditor() {
   };
 
   const handleRemoveTestimonial = (index: number) => {
-    setContent((prev) => ({
-      ...prev,
-      items: prev.items.filter((_, i) => i !== index),
-    }));
+    const testimonial = content.items[index];
+    const confirmMessage = `¿Estás seguro de que quieres eliminar el testimonio de "${testimonial.author}"?\n\nEsta acción no se puede deshacer.`;
+
+    if (window.confirm(confirmMessage)) {
+      setContent((prev) => ({
+        ...prev,
+        items: prev.items.filter((_, i) => i !== index),
+      }));
+    }
   };
 
   const handleMoveUp = (index: number) => {
@@ -264,13 +269,19 @@ export default function TestimonialsEditor() {
             <h3 className="text-lg font-medium text-gray-900">Testimonios</h3>
             <button
               onClick={handleAddTestimonial}
-              className="px-3 py-1 bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors shadow-sm"
             >
-              + Agregar Testimonio
+              ➕ Agregar Testimonio
             </button>
           </div>
 
-          {content.items.map((testimonial, index) => (
+          {content.items.length === 0 ? (
+            <div className="text-center py-8 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300">
+              <p className="text-gray-500 mb-4">No hay testimonios agregados aún</p>
+              <p className="text-sm text-gray-400">Haz clic en "Agregar Testimonio" para comenzar</p>
+            </div>
+          ) : (
+            content.items.map((testimonial, index) => (
             <div key={index} className="bg-gray-50 p-4 rounded-lg space-y-4">
               <div className="flex justify-between items-start">
                 <div className="flex items-center gap-2">
@@ -302,9 +313,10 @@ export default function TestimonialsEditor() {
                 </div>
                 <button
                   onClick={() => handleRemoveTestimonial(index)}
-                  className="text-red-600 hover:text-red-700"
+                  className="inline-flex items-center px-3 py-1 text-sm bg-red-50 text-red-600 border border-red-200 rounded-md hover:bg-red-100 hover:text-red-700 transition-colors"
+                  title={`Eliminar testimonio de ${testimonial.author}`}
                 >
-                  Eliminar
+                  🗑️ Eliminar
                 </button>
               </div>
 
@@ -455,7 +467,7 @@ export default function TestimonialsEditor() {
                 </label>
               </div>
             </div>
-          ))}
+          )))}
         </div>
       </div>
     </div>
