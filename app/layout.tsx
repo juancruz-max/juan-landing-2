@@ -14,9 +14,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://academy.cromaxstrategies.com"),
-  title: "Cromax Academy - Academia de Marketing Digital",
+  title: "Cromax Academy - Aprende a generar ingresos reales con LinkedIn",
   description:
-    "Aprende desde cero una de las profesiones más rentables para comenzar a generar ingresos por internet. Sin experiencia previa necesaria.",
+    "Domina LinkedIn y Sales Navigator para encontrar, conectar y convertir prospectos de alta calidad. Sin experiencia previa necesaria.",
   keywords: "marketing digital, academia online, ingresos por internet, formación digital, cromax academy",
   authors: [{ name: "Cromax Academy" }],
   creator: "Cromax Academy",
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: "https://academy.cromaxstrategies.com",
     siteName: "Cromax Academy",
-    title: "Cromax Academy - Academia de Marketing Digital",
-    description: "Aprende desde cero una de las profesiones más rentables para comenzar a generar ingresos por internet. Sin experiencia previa necesaria.",
+    title: "Cromax Academy - Aprende a generar ingresos reales con LinkedIn",
+    description: "Domina LinkedIn y Sales Navigator para encontrar, conectar y convertir prospectos de alta calidad. Sin experiencia previa necesaria.",
     images: [
       {
         url: "/logo-preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Cromax Academy - Academia de Marketing Digital",
+        alt: "Cromax Academy - Aprende a generar ingresos reales con LinkedIn",
         type: "image/jpeg",
       },
     ],
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@cromax_academy", // Reemplaza con tu handle de Twitter si lo tienes
     creator: "@cromax_academy",
-    title: "Cromax Academy - Academia de Marketing Digital",
-    description: "Aprende desde cero una de las profesiones más rentables para comenzar a generar ingresos por internet. Sin experiencia previa necesaria.",
+    title: "Cromax Academy - Aprende a generar ingresos reales con LinkedIn",
+    description: "Domina LinkedIn y Sales Navigator para encontrar, conectar y convertir prospectos de alta calidad. Sin experiencia previa necesaria.",
     images: ["/logo-preview.jpg"],
   },
 
