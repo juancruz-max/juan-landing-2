@@ -238,7 +238,7 @@
         "author": "José González",
         "role": "CEO en Fintax Contadores",
         "thumbnail": "/images/Testimonio Jose.jpg",
-        "authorImage": "/images/Testimonio Jose.jpg",
+        "authorImage": "/images/jose.jpg",
         "companyLogo": "/images/LinkedIn_icon.png",
         "linkedinUrl": "https://www.linkedin.com/company/fintax-contadores/",
         "profileUrl": "https://www.linkedin.com/in/jos%C3%A9-miguel-gonzalez-910854195/",
@@ -266,7 +266,7 @@
         "author": "Santiago Garro",
         "role": "Setter de Linkedin B2B",
         "thumbnail": "https://d1yei2z3i6k35z.cloudfront.net/9799259/6844e0d243f77_Agregarunsubtítulo3.jpg",
-        "authorImage": "https://d1yei2z3i6k35z.cloudfront.net/9799259/6844e0d243f77_Agregarunsubtítulo3.jpg",
+        "authorImage": "/images/santiago.jpeg",
         "companyLogo": "/images/LinkedIn_icon.png",
         "linkedinUrl": "",
         "profileUrl": "",
@@ -300,7 +300,7 @@
       "currentPrice": "$300 USD",
       "futurePrice": "$500 USD",
       "originalPrice": "$2,197 USD",
-      "urgencyText": "🔥 Últimos 5 cupos disponibles",
+      "urgencyText": "🔥 Últimos 2 cupos disponibles",
       "isActive": true
     },
     "cta": {
@@ -311,7 +311,7 @@
   "instructor": {
     "name": "Juan Cruz Cummaudo",
     "title": "Fundador de Cromax Academy",
-    "description": "Después de invertir más de **$6,000 en capacitaciones** y años de experiencia en el campo, desarrolló un sistema efectivo de prospección por LinkedIn. Su experiencia y metodología son la base de Cromax Academy, ayudando a empresas a conseguir reuniones calificadas de manera consistente.\n\n**Ha trabajado con 9 clientes**, facturado más de **$20,000 dólares** aplicando estas habilidades, y actualmente es formador y coach en dos academias de Inteligencia Artificial enseñando prospección por LinkedIn.\n\n**Ha formado a más de 10 personas** que hoy aplican estas estrategias tanto para conseguir trabajo remoto como para escalar sus propios negocios."
+    "description": "Después de invertir más de **$10,000 en capacitaciones** y años de experiencia en el campo, desarrolló un sistema efectivo de prospección por LinkedIn. Su experiencia y metodología son la base de Cromax Academy, ayudando a empresas a conseguir reuniones calificadas de manera consistente.\n\n**Ha trabajado con +15 clientes**, facturado más de **$27,500 dólares** aplicando estas habilidades, y actualmente es formador y coach en dos academias de Inteligencia Artificial enseñando prospección por LinkedIn.\n\n**Ha formado a más de 15 personas** que hoy aplican estas estrategias tanto para conseguir trabajo remoto como para escalar sus propios negocios."
   },
   "faq": {
     "title": "Preguntas Frecuentes",
