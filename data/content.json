@@ -57,7 +57,7 @@
     ]
   },
   "benefits": {
-    "title": "¿Sabes qué lograrás con Cromax Academy?",
+    "title": "¿Sabes qué lograrás con Cromax Academy?a",
     "videoUrl": "/content.mp4",
     "items": [
       {
@@ -141,7 +141,9 @@
           "Crear hábitos que te impulsen hacia el éxito"
         ],
         "finalNote": "Curso práctico y vivencial: PNL + coaching + dinámicas guiadas.",
-        "highlights": ["\"Si no pasa por el cuerpo, no cuenta\""]
+        "highlights": [
+          "\"Si no pasa por el cuerpo, no cuenta\""
+        ]
       },
       {
         "name": "Daniel Planas",
