@@ -7,6 +7,12 @@ interface HeroProps {
   subtitle: string;
   cta: string;
   ctaLink: string;
+  academyLabel?: string;
+  videoUrl?: string;
+  videoPoster?: string;
+  videoLabel?: string;
+  lifetimeAccessLabel?: string;
+  badges?: string[];
 }
 
 const Hero = ({
@@ -14,6 +20,12 @@ const Hero = ({
   subtitle,
   cta,
   ctaLink,
+  academyLabel = "Cromax Academy",
+  videoUrl = "https://d1yei2z3i6k35z.cloudfront.net/9799259/6846370454710_VSLACEDEMYCROMAX.mp4",
+  videoPoster = "https://d1yei2z3i6k35z.cloudfront.net/9799259/684638bac781f_CromaxAcademy-Presentacion.jpg",
+  videoLabel = "🎥 Video de Presentación",
+  lifetimeAccessLabel = "Acceso de por vida",
+  badges = ["Sin experiencia previa", "Acceso inmediato", "Comunidad incluida"],
 }: HeroProps) => {
 
   return (
@@ -59,7 +71,7 @@ const Hero = ({
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 sm:px-6 lg:px-8 py-2 rounded-full text-sm sm:text-base lg:text-lg font-medium mb-4 sm:mb-6">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-              Cromax Academy
+              {academyLabel}
             </div>
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-secondary leading-tight mb-4 sm:mb-6 px-2">
@@ -94,17 +106,17 @@ const Hero = ({
                   muted
                   playsInline
                   controlsList="nodownload"
-                  poster="https://d1yei2z3i6k35z.cloudfront.net/9799259/684638bac781f_CromaxAcademy-Presentacion.jpg"
+                  poster={videoPoster}
                   webkit-playsinline="true"
                   x5-playsinline="true"
                 >
-                  <source src="https://d1yei2z3i6k35z.cloudfront.net/9799259/6846370454710_VSLACEDEMYCROMAX.mp4" type="video/mp4" />
+                  <source src={videoUrl} type="video/mp4" />
                   Tu navegador no soporta el elemento de video.
                 </video>
 
                 {/* Video overlay badge */}
                 <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-primary text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-medium">
-                  🎥 Video de Presentación
+                  {videoLabel}
                 </div>
               </motion.div>
 
@@ -117,7 +129,7 @@ const Hero = ({
               >
                 <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm">
                   <div className="text-accent font-bold">∞</div>
-                  <div className="text-gray-600">Acceso de por vida</div>
+                  <div className="text-gray-600">{lifetimeAccessLabel}</div>
                 </div>
               </motion.div>
             </div>
@@ -151,24 +163,14 @@ const Hero = ({
             transition={{ duration: 0.8, delay: 0.7 }}
             className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 pt-6 pb-8 sm:pb-12 text-xs sm:text-sm text-gray-500 px-4"
           >
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Sin experiencia previa</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Acceso inmediato</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Comunidad incluida</span>
-            </div>
+            {badges.map((badge, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{badge}</span>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>

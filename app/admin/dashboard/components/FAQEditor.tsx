@@ -8,12 +8,14 @@ interface FAQItem {
 
 interface FAQContent {
   title: string;
+  subtitle?: string;
   items: FAQItem[];
 }
 
 export default function FAQEditor() {
   const [content, setContent] = useState<FAQContent>({
     title: "",
+    subtitle: "",
     items: [],
   });
   const [isPreviewMode, setIsPreviewMode] = useState(false);
@@ -138,7 +140,10 @@ export default function FAQEditor() {
         />
 
         <div className="bg-gray-50 p-6 rounded-lg">
-          <h2 className="text-2xl font-bold mb-3">{content.title}</h2>
+          <h2 className="text-2xl font-bold mb-1">{content.title}</h2>
+          {content.subtitle && (
+            <p className="text-gray-600 mb-6">{content.subtitle}</p>
+          )}
           <div className="space-y-4">
             {content.items.map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow">
@@ -172,6 +177,19 @@ export default function FAQEditor() {
             value={content.title}
             onChange={(e) => handleChange("title", e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Subtítulo (Opcional)
+          </label>
+          <input
+            type="text"
+            value={content.subtitle || ""}
+            onChange={(e) => handleChange("subtitle", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Subtítulo de la sección"
           />
         </div>
 

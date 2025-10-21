@@ -34,7 +34,7 @@ const renderFormattedText = (text: string) => {
   });
 };
 
-const FAQ = ({ title, items }: FAQProps) => {
+const FAQ = ({ title, subtitle, items }: FAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -98,7 +98,7 @@ const FAQ = ({ title, items }: FAQProps) => {
         >
           <h2 className="text-4xl font-bold mb-4 px-4">{title}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto px-4">
-            Resolvemos tus dudas sobre nuestro servicio de prospección
+            {subtitle || "Resolvemos tus dudas sobre nuestro servicio de prospección"}
           </p>
         </motion.div>
 

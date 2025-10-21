@@ -10,6 +10,13 @@ interface HeroContent {
   title: string;
   subtitle: string;
   cta: string;
+  ctaLink: string;
+  academyLabel: string;
+  videoUrl: string;
+  videoPoster: string;
+  videoLabel: string;
+  lifetimeAccessLabel: string;
+  badges: string[];
   cards: {
     profileOptimization: HeroCard;
     responseRate: HeroCard;
@@ -26,6 +33,13 @@ export default function HeroEditor() {
     title: "",
     subtitle: "",
     cta: "",
+    ctaLink: "",
+    academyLabel: "Cromax Academy",
+    videoUrl: "",
+    videoPoster: "",
+    videoLabel: "🎥 Video de Presentación",
+    lifetimeAccessLabel: "Acceso de por vida",
+    badges: ["Sin experiencia previa", "Acceso inmediato", "Comunidad incluida"],
     cards: {
       profileOptimization: {
         title: "Perfil Optimizado",
@@ -59,6 +73,13 @@ export default function HeroEditor() {
           title: data.title || "",
           subtitle: data.subtitle || "",
           cta: data.cta || "",
+          ctaLink: data.ctaLink || "",
+          academyLabel: data.academyLabel || "Cromax Academy",
+          videoUrl: data.videoUrl || "",
+          videoPoster: data.videoPoster || "",
+          videoLabel: data.videoLabel || "🎥 Video de Presentación",
+          lifetimeAccessLabel: data.lifetimeAccessLabel || "Acceso de por vida",
+          badges: data.badges || ["Sin experiencia previa", "Acceso inmediato", "Comunidad incluida"],
           cards: {
             profileOptimization: {
               title: data.cards?.profileOptimization?.title || "Perfil Optimizado",
@@ -220,7 +241,102 @@ export default function HeroEditor() {
           />
         </div>
 
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Link del CTA
+          </label>
+          <input
+            type="text"
+            value={content.ctaLink}
+            onChange={(e) => handleChange("ctaLink", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
 
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Label de Academia
+          </label>
+          <input
+            type="text"
+            value={content.academyLabel}
+            onChange={(e) => handleChange("academyLabel", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            URL del Video
+          </label>
+          <input
+            type="text"
+            value={content.videoUrl}
+            onChange={(e) => handleChange("videoUrl", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Poster del Video
+          </label>
+          <input
+            type="text"
+            value={content.videoPoster}
+            onChange={(e) => handleChange("videoPoster", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Label del Video
+          </label>
+          <input
+            type="text"
+            value={content.videoLabel}
+            onChange={(e) => handleChange("videoLabel", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Label de Acceso de por Vida
+          </label>
+          <input
+            type="text"
+            value={content.lifetimeAccessLabel}
+            onChange={(e) => handleChange("lifetimeAccessLabel", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        {/* Badges */}
+        <div className="mt-8">
+          <h3 className="text-lg font-medium text-gray-900 mb-4">Badges (3 elementos)</h3>
+          {content.badges.map((badge, index) => (
+            <div key={index} className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Badge {index + 1}
+              </label>
+              <input
+                type="text"
+                value={badge}
+                onChange={(e) => {
+                  const newBadges = [...content.badges];
+                  newBadges[index] = e.target.value;
+                  setContent((prev) => ({
+                    ...prev,
+                    badges: newBadges
+                  }));
+                }}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+          ))}
+        </div>
 
         {/* Tarjetas pequeñas */}
         <div className="mt-8">

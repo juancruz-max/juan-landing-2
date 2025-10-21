@@ -7,12 +7,15 @@ interface AboutContent {
     title: string;
     description: string[];
     commitment: string;
+    image?: string;
+    imageLink?: string;
     tags: string[];
   };
   founder: {
     name: string;
     role: string;
     description: string;
+    image?: string;
     tags: string[];
   };
 }
@@ -27,12 +30,15 @@ export default function AboutEditor() {
         "Nos enfocamos en construir sistemas de prospección efectivos que generen entre 15 y 35 reuniones calificadas en menos de 90 días. +30 reuniones calificadas en menos de 90 días."
       ],
       commitment: "Aumentar la cantidad de reuniones con clientes potenciales, brindando un proceso estructurado que ayude a entender mejor cómo venderles y, además, transferir el know-how para que su equipo pueda seguir escalando la estrategia a largo plazo.",
+      image: "/logo.jpeg",
+      imageLink: "https://www.linkedin.com/company/cromax-crecimientomaximo/",
       tags: ["Linkedin", "Email Masivo Personalizado", "Prospectos Calificados", "Analisis de mercado"]
     },
     founder: {
       name: "Juan Cruz Cummaudo",
       role: "Fundador & CEO",
       description: "Después de invertir más de $6,000 en capacitaciones y años de experiencia en el campo, Juan desarrolló un sistema efectivo de prospección B2B. Su experiencia y metodología son la base de Cromax, ayudando a empresas TI a conseguir reuniones calificadas de manera consistente.",
+      image: "/juan.png",
       tags: ["Especialista en Linkedin", "Lider de equipo", "Analista de negocios B2B"]
     }
   });
@@ -55,12 +61,15 @@ export default function AboutEditor() {
               "Nos enfocamos en construir sistemas de prospección efectivos que generen entre 15 y 35 reuniones calificadas en menos de 90 días. +30 reuniones calificadas en menos de 90 días."
             ],
             commitment: data.company?.commitment || "Aumentar la cantidad de reuniones con clientes potenciales, brindando un proceso estructurado que ayude a entender mejor cómo venderles y, además, transferir el know-how para que su equipo pueda seguir escalando la estrategia a largo plazo.",
+            image: data.company?.image || "/logo.jpeg",
+            imageLink: data.company?.imageLink || "https://www.linkedin.com/company/cromax-crecimientomaximo/",
             tags: data.company?.tags || ["Linkedin", "Email Masivo Personalizado", "Prospectos Calificados", "Analisis de mercado"]
           },
           founder: {
             name: data.founder?.name || "Juan Cruz Cummaudo",
             role: data.founder?.role || "Fundador & CEO",
             description: data.founder?.description || "Después de invertir más de $6,000 en capacitaciones y años de experiencia en el campo, Juan desarrolló un sistema efectivo de prospección B2B. Su experiencia y metodología son la base de Cromax, ayudando a empresas TI a conseguir reuniones calificadas de manera consistente.",
+            image: data.founder?.image || "/juan.png",
             tags: data.founder?.tags || ["Especialista en Linkedin", "Lider de equipo", "Analista de negocios B2B"]
           }
         };
@@ -358,6 +367,30 @@ export default function AboutEditor() {
             </div>
 
             <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Imagen de la Empresa
+              </label>
+              <input
+                type="text"
+                value={content.company.image || ""}
+                onChange={(e) => handleCompanyChange("image", e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Link de la Imagen
+              </label>
+              <input
+                type="text"
+                value={content.company.imageLink || ""}
+                onChange={(e) => handleCompanyChange("imageLink", e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div>
               <div className="flex justify-between items-center mb-2">
                 <label className="block text-sm font-medium text-gray-700">
                   Etiquetas
@@ -429,6 +462,18 @@ export default function AboutEditor() {
                 value={content.founder.description}
                 onChange={(e) => handleFounderChange("description", e.target.value)}
                 rows={4}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Imagen del Fundador
+              </label>
+              <input
+                type="text"
+                value={content.founder.image || ""}
+                onChange={(e) => handleFounderChange("image", e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               />
             </div>

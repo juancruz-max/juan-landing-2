@@ -6,34 +6,34 @@ import dynamic from "next/dynamic";
 
 // Importar dinámicamente los componentes de edición
 const HeroEditor = dynamic(() => import("./components/HeroEditor"));
-const ProblemsEditor = dynamic(() => import("./components/ProblemsEditor"));
-const MethodologyEditor = dynamic(
-  () => import("./components/MethodologyEditor")
-);
 const BenefitsEditor = dynamic(() => import("./components/BenefitsEditor"));
-const ServicesEditor = dynamic(() => import("./components/ServicesEditor"));
 const TestimonialsEditor = dynamic(
   () => import("./components/TestimonialsEditor")
 );
-const RequirementsEditor = dynamic(() => import("./components/RequirementsEditor"));
 const FAQEditor = dynamic(() => import("./components/FAQEditor"));
-const CalendlyEditor = dynamic(() => import("./components/CalendlyEditor"));
-const CTAEditor = dynamic(() => import("./components/CTAEditor"));
 const AboutEditor = dynamic(() => import("./components/AboutEditor"));
 const FooterEditor = dynamic(() => import("./components/FooterEditor"));
+const AudienceEditor = dynamic(() => import("./components/AudienceEditor"));
+const ModulesEditor = dynamic(() => import("./components/ModulesEditor"));
+const ExtrasEditor = dynamic(() => import("./components/ExtrasEditor"));
+const ExpertModulesEditor = dynamic(() => import("./components/ExpertModulesEditor"));
+const RecapitulacionEditor = dynamic(() => import("./components/RecapitulacionEditor"));
+const InstructorEditor = dynamic(() => import("./components/InstructorEditor"));
+const PricingEditor = dynamic(() => import("./components/PricingEditor"));
 
 const sections = [
   { id: "hero", name: "Hero Section", icon: "🎯" },
-  { id: "problems", name: "Problems", icon: "❗" },
-  { id: "methodology", name: "Methodology", icon: "📈" },
-  { id: "services", name: "Services", icon: "💼" },
   { id: "about", name: "Quienes Somos", icon: "👥" },
   { id: "benefits", name: "Benefits", icon: "🏆" },
   { id: "testimonials", name: "Testimonials", icon: "💬" },
-  { id: "requirements", name: "Requisitos", icon: "✅" },
+  { id: "audience", name: "Audience", icon: "👥" },
+  { id: "modules", name: "Modules", icon: "📚" },
+  { id: "extras", name: "Extras", icon: "🎁" },
+  { id: "expertModules", name: "Expert Modules", icon: "👨‍🏫" },
+  { id: "recapitulacion", name: "Recapitulación", icon: "📋" },
+  { id: "instructor", name: "Instructor", icon: "👨‍💼" },
+  { id: "pricing", name: "Pricing", icon: "💰" },
   { id: "faq", name: "FAQ", icon: "❓" },
-  { id: "calendly", name: "Calendly", icon: "📅" },
-  { id: "cta", name: "Call to Action", icon: "📞" },
   { id: "footer", name: "Footer", icon: "🔽" },
 ];
 
@@ -105,26 +105,28 @@ export default function AdminDashboard() {
     switch (activeSection) {
       case "hero":
         return <HeroEditor />;
-      case "problems":
-        return <ProblemsEditor />;
-      case "methodology":
-        return <MethodologyEditor />;
-      case "services":
-        return <ServicesEditor />;
       case "about":
         return <AboutEditor />;
       case "benefits":
         return <BenefitsEditor />;
       case "testimonials":
         return <TestimonialsEditor />;
-      case "requirements":
-        return <RequirementsEditor />;
+      case "audience":
+        return <AudienceEditor />;
+      case "modules":
+        return <ModulesEditor />;
+      case "extras":
+        return <ExtrasEditor />;
+      case "expertModules":
+        return <ExpertModulesEditor />;
+      case "recapitulacion":
+        return <RecapitulacionEditor />;
+      case "instructor":
+        return <InstructorEditor />;
+      case "pricing":
+        return <PricingEditor />;
       case "faq":
         return <FAQEditor />;
-      case "calendly":
-        return <CalendlyEditor />;
-      case "cta":
-        return <CTAEditor />;
       case "footer":
         return <FooterEditor />;
       default:

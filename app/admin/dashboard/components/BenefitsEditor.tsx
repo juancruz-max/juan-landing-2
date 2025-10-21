@@ -9,12 +9,14 @@ interface BenefitItem {
 
 interface BenefitsContent {
   title: string;
+  videoUrl?: string;
   items: BenefitItem[];
 }
 
 export default function BenefitsEditor() {
   const [content, setContent] = useState<BenefitsContent>({
     title: "",
+    videoUrl: "",
     items: [],
   });
   const [isPreviewMode, setIsPreviewMode] = useState(false);
@@ -29,6 +31,7 @@ export default function BenefitsEditor() {
         const processedData = {
           ...data,
           title: data.title || "",
+          videoUrl: data.videoUrl || "",
           items: data.items ? data.items.map((item: BenefitItem) => ({
             ...item,
             icon: item.icon || "🚀",
@@ -181,6 +184,18 @@ export default function BenefitsEditor() {
             type="text"
             value={content.title}
             onChange={(e) => handleChange("title", e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            URL del Video (Opcional)
+          </label>
+          <input
+            type="text"
+            value={content.videoUrl || ""}
+            onChange={(e) => handleChange("videoUrl", e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           />
         </div>

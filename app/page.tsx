@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import Audience from "../components/Audience";
+import About from "../components/About";
 import Benefits from "../components/Benefits";
 import Modules from "../components/Modules";
 import Extras from "../components/Extras";
@@ -26,6 +27,12 @@ export default function Home() {
         subtitle={typedContent.hero.subtitle}
         cta={typedContent.hero.cta}
         ctaLink={typedContent.hero.ctaLink}
+        academyLabel={typedContent.hero.academyLabel}
+        videoUrl={typedContent.hero.videoUrl}
+        videoPoster={typedContent.hero.videoPoster}
+        videoLabel={typedContent.hero.videoLabel}
+        lifetimeAccessLabel={typedContent.hero.lifetimeAccessLabel}
+        badges={typedContent.hero.badges}
       />
 
       {/* Testimonials */}
@@ -35,6 +42,15 @@ export default function Home() {
         viewText={typedContent.testimonials.viewText}
         items={typedContent.testimonials.items}
       />
+
+      {/* About */}
+      {typedContent.about && (
+        <About
+          title={typedContent.about.title}
+          company={typedContent.about.company}
+          founder={typedContent.about.founder}
+        />
+      )}
 
       {/* Target Audience */}
       {typedContent.audience && (
@@ -48,6 +64,7 @@ export default function Home() {
       <Benefits
         title={typedContent.benefits.title}
         items={typedContent.benefits.items}
+        videoUrl={typedContent.benefits.videoUrl}
       />
 
       {/* Course Modules */}
@@ -96,6 +113,10 @@ export default function Home() {
           name={typedContent.instructor.name}
           title={typedContent.instructor.title}
           description={typedContent.instructor.description}
+          image={typedContent.instructor.image}
+          credentials={typedContent.instructor.credentials}
+          sectionTitle={typedContent.instructor.sectionTitle}
+          linkedinUrl={typedContent.instructor.linkedinUrl}
         />
       )}
 
@@ -110,7 +131,11 @@ export default function Home() {
       )}
 
       {/* FAQ */}
-      <FAQ title={typedContent.faq.title} items={typedContent.faq.items} />
+      <FAQ
+        title={typedContent.faq.title}
+        subtitle={typedContent.faq.subtitle}
+        items={typedContent.faq.items}
+      />
 
       {/* Simple CTA Button */}
       <section className="py-12 bg-gray-50">

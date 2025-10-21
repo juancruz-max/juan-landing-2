@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readContentFile, writeContentFile } from "@/lib/content";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+
+
 
 // GET /api/content/calendly
 export async function GET() {
@@ -20,14 +20,6 @@ export async function GET() {
 // POST /api/content/calendly
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
-    }
-
     const calendlyData = await request.json();
     const content = await readContentFile();
 

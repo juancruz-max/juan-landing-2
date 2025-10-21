@@ -8,6 +8,12 @@ export interface Hero {
   subtitle: string;
   cta: string;
   ctaLink: string;
+  academyLabel?: string;
+  videoUrl?: string;
+  videoPoster?: string;
+  videoLabel?: string;
+  lifetimeAccessLabel?: string;
+  badges?: string[];
   cards?: {
     profileOptimization: HeroCard;
     responseRate: HeroCard;
@@ -79,6 +85,7 @@ export interface FAQItem {
 
 export interface FAQ {
   title: string;
+  subtitle?: string;
   items: FAQItem[];
 }
 
@@ -86,7 +93,12 @@ export interface MethodologyItem {
   title: string;
   description: string;
   items: string[];
-  icon: JSX.Element;
+  icon?: JSX.Element;
+  metric?: {
+    value: string;
+    label: string;
+    color: string;
+  };
 }
 
 export interface Methodology {
@@ -109,6 +121,7 @@ export interface Benefit {
 
 export interface Benefits {
   title: string;
+  videoUrl?: string;
   items: Benefit[];
 }
 
@@ -118,12 +131,15 @@ export interface About {
     title: string;
     description: string[];
     commitment: string;
+    image?: string;
+    imageLink?: string;
     tags: string[];
   };
   founder: {
     name: string;
     role: string;
     description: string;
+    image?: string;
     tags: string[];
   };
 }
@@ -213,25 +229,31 @@ export interface PricingCTA {
   url: string;
 }
 
+export interface LimitedOffer {
+  remainingSpots: number;
+  currentPrice: string;
+  futurePrice: string;
+  originalPrice: string;
+  urgencyText: string;
+  isActive?: boolean;
+}
+
 export interface Pricing {
   title: string;
-  price?: string;
   note: string;
   cta: PricingCTA;
-  limitedOffer?: {
-    remainingSpots: number;
-    currentPrice: string;
-    futurePrice: string;
-    originalPrice: string;
-    urgencyText: string;
-    isActive?: boolean;
-  };
+  limitedOffer?: LimitedOffer;
 }
 
 export interface Instructor {
   name: string;
   title: string;
   description: string;
+  bio?: string;
+  image?: string;
+  credentials?: string[];
+  sectionTitle?: string;
+  linkedinUrl?: string;
 }
 
 export interface RecapitulacionItem {

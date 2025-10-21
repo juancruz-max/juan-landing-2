@@ -61,7 +61,7 @@ const Recapitulacion = ({
             {title}
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
-            Esto es todo lo que recibís al unirte hoy a Cromax Academy
+            {subtitle || "Esto es todo lo que recibís al unirte hoy a Cromax Academy"}
           </p>
         </motion.div>
 

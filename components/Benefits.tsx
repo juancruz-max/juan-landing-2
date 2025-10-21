@@ -11,6 +11,7 @@ interface Benefit {
 interface BenefitsProps {
   title: string;
   items: Benefit[];
+  videoUrl?: string;
 }
 
 // Function to get SVG icons based on the benefit title
@@ -107,7 +108,7 @@ const getBenefitIcon = (title: string): JSX.Element => {
   }
 };
 
-export default function Benefits({ title, items }: BenefitsProps) {
+export default function Benefits({ title, items, videoUrl = "/content.mp4" }: BenefitsProps) {
   return (
     <section id="beneficios" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
@@ -164,7 +165,7 @@ export default function Benefits({ title, items }: BenefitsProps) {
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start px-4 sm:px-0">
               <div className="relative max-w-sm sm:max-w-md lg:max-w-sm">
                 <video
-                  src="/content.mp4"
+                  src={videoUrl}
                   autoPlay
                   muted
                   loop

@@ -34,7 +34,15 @@ const renderFormattedText = (text: string) => {
   });
 };
 
-const Instructor = ({ name, title, description }: InstructorProps) => {
+const Instructor = ({
+  name,
+  title,
+  description,
+  image = "/juan.jpeg",
+  credentials = ["Especialista en Linkedin", "Formador y Coach", "Escalamiento de negocios B2B"],
+  sectionTitle = "Conoce a tu instructor",
+  linkedinUrl = "https://www.linkedin.com/in/juan-cruz-cummaudo"
+}: InstructorProps) => {
   return (
     <section id="instructor" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
@@ -74,7 +82,7 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-            Conoce a tu instructor
+            {sectionTitle}
           </h2>
         </motion.div>
 
@@ -95,7 +103,7 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
               className="relative w-48 h-48 rounded-full overflow-hidden flex-shrink-0"
             >
               <Image
-                src="/juan.jpeg"
+                src={image}
                 alt={name}
                 fill
                 style={{ objectFit: "cover" }}
@@ -116,7 +124,7 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
                     {name}
                   </h3>
                   <a
-                    href="https://www.linkedin.com/in/juan-cruz-cummaudo"
+                    href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white/80 hover:bg-white p-1.5 rounded-full transition-all shadow-sm group"
@@ -145,15 +153,18 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mt-8 flex flex-wrap gap-3 justify-center"
               >
-                <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                  Especialista en Linkedin
-                </span>
-                <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-                  Formador y Coach
-                </span>
-                <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
-                 Escalamiento de negocios B2B
-                </span>
+                {credentials.map((credential, index) => {
+                  const colors = [
+                    "bg-primary/10 text-primary",
+                    "bg-blue-100 text-blue-800",
+                    "bg-purple-100 text-purple-800"
+                  ];
+                  return (
+                    <span key={index} className={`${colors[index % colors.length]} px-4 py-2 rounded-full text-sm font-medium`}>
+                      {credential}
+                    </span>
+                  );
+                })}
               </motion.div>
             </div>
           </div>
@@ -170,7 +181,7 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
                 className="relative w-40 h-40 rounded-full overflow-hidden flex-shrink-0"
               >
                 <Image
-                  src="/juan.jpeg"
+                  src={image}
                   alt={name}
                   fill
                   style={{ objectFit: "cover" }}
@@ -191,7 +202,7 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
                       {name}
                     </h3>
                     <a
-                      href="https://www.linkedin.com/in/juan-cruz-cummaudo"
+                      href={linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white/80 hover:bg-white p-1.5 rounded-full transition-all shadow-sm group"
@@ -217,15 +228,18 @@ const Instructor = ({ name, title, description }: InstructorProps) => {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="flex flex-wrap gap-3 mb-6"
                   >
-                    <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                      Especialista en Linkedin
-                    </span>
-                    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-                      Formador y Coach
-                    </span>
-                    <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
-                     Escalamiento de negocios B2B
-                    </span>
+                    {credentials.map((credential, index) => {
+                      const colors = [
+                        "bg-primary/10 text-primary",
+                        "bg-blue-100 text-blue-800",
+                        "bg-purple-100 text-purple-800"
+                      ];
+                      return (
+                        <span key={index} className={`${colors[index % colors.length]} px-4 py-2 rounded-full text-sm font-medium`}>
+                          {credential}
+                        </span>
+                      );
+                    })}
                   </motion.div>
                 </motion.div>
               </div>

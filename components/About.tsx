@@ -31,7 +31,26 @@ const renderFormattedText = (text: string) => {
   });
 };
 
-const About = () => {
+interface AboutProps {
+  title?: string;
+  company?: {
+    title: string;
+    description: string[];
+    commitment: string;
+    image?: string;
+    imageLink?: string;
+    tags: string[];
+  };
+  founder?: {
+    name: string;
+    role: string;
+    description: string;
+    image?: string;
+    tags: string[];
+  };
+}
+
+const About = ({ title = "Quiénes Somos", company, founder }: AboutProps) => {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
@@ -59,7 +78,7 @@ const About = () => {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-[#4188fa] to-[#4188fa]/80 bg-clip-text text-transparent">
-            Quiénes Somos
+            {title}
           </h2>
         </motion.div>
 
@@ -80,7 +99,7 @@ const About = () => {
               className="relative h-[400px] rounded-xl overflow-hidden"
             >
               <Image
-                src="/logo.jpeg"
+                src={company?.image || "/logo.jpeg"}
                 alt="Cromax"
                 fill
                 style={{ objectFit: "contain" }}
@@ -88,7 +107,7 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#4188fa]/10 to-transparent" />
               <a
-                href="https://www.linkedin.com/company/cromax-crecimientomaximo/"
+                href={company?.imageLink || "https://www.linkedin.com/company/cromax-crecimientomaximo/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute bottom-4 right-4 bg-white/80 hover:bg-white p-2 rounded-full transition-all shadow-lg group"
@@ -111,36 +130,39 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                  Especialistas en Prospección B2B para Empresas de TI
+                  {company?.title || "Especialistas en Prospección B2B para Empresas de TI"}
                 </h3>
                 <div className="space-y-6 text-gray-600">
-                  <p>
-                    En Cromax, acompañamos a empresas de tecnología y software,
-                    que ya cuentan con una base de clientes, a eliminar su
-                    dependencia de referidos y expandirse a nuevos mercados.
-                  </p>
-                  <p>
-                    <span className="font-semibold text-gray-800">
-                      Nos enfocamos
-                    </span>{" "}
-                    en construir sistemas de prospección efectivos que generen
-                    entre 15 y 35 reuniones calificadas en menos de 90 días.
-                    <span className="text-[#4188fa]">
-                      {" "}
-                      +30 reuniones calificadas
-                    </span>{" "}
-                    en menos de 90 días.
-                  </p>
+                  {company?.description && company.description.map((desc, idx) => (
+                    <p key={idx}>{desc}</p>
+                  ))}
+                  {!company?.description && (
+                    <>
+                      <p>
+                        En Cromax, acompañamos a empresas de tecnología y software,
+                        que ya cuentan con una base de clientes, a eliminar su
+                        dependencia de referidos y expandirse a nuevos mercados.
+                      </p>
+                      <p>
+                        <span className="font-semibold text-gray-800">
+                          Nos enfocamos
+                        </span>{" "}
+                        en construir sistemas de prospección efectivos que generen
+                        entre 15 y 35 reuniones calificadas en menos de 90 días.
+                        <span className="text-[#4188fa]">
+                          {" "}
+                          +30 reuniones calificadas
+                        </span>{" "}
+                        en menos de 90 días.
+                      </p>
+                    </>
+                  )}
                   <div className="pt-4">
                     <h4 className="font-semibold text-gray-800 mb-4">
                       Nuestro compromiso:
                     </h4>
                     <p className="italic">
-                      "Aumentar la cantidad de reuniones con clientes
-                      potenciales, brindando un proceso estructurado que ayude a
-                      entender mejor cómo venderles y, además, transferir el
-                      know-how para que su equipo pueda seguir escalando la
-                      estrategia a largo plazo."
+                      "{company?.commitment || "Aumentar la cantidad de reuniones con clientes potenciales, brindando un proceso estructurado que ayude a entender mejor cómo venderles y, además, transferir el know-how para que su equipo pueda seguir escalando la estrategia a largo plazo."}"
                     </p>
                   </div>
                 </div>
@@ -153,12 +175,12 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="flex flex-wrap gap-4 pt-6"
               >
-                {[
+                {(company?.tags || [
                   "Linkedin",
                   "Email Masivo Personalizado",
                   "Prospectos Calificados",
                   "Analisis de mercado",
-                ].map((tag, index) => (
+                ]).map((tag, index) => (
                   <span
                     key={index}
                     className="bg-[#4188fa]/10 text-[#4188fa] px-4 py-2 rounded-full text-sm font-medium"
@@ -188,8 +210,8 @@ const About = () => {
               className="relative w-48 h-48 rounded-full overflow-hidden flex-shrink-0"
             >
               <Image
-                src="/juan.png"
-                alt="Juan Cruz Cummaudo"
+                src={founder?.image || "/juan.png"}
+                alt={founder?.name || "Juan Cruz Cummaudo"}
                 fill
                 style={{ objectFit: "cover" }}
                 className="rounded-full"
@@ -199,7 +221,7 @@ const About = () => {
             <div className="flex-grow text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-[#4188fa] to-[#4188fa]/80 bg-clip-text text-transparent">
-                  Juan Cruz Cummaudo
+                  {founder?.name || "Juan Cruz Cummaudo"}
                 </h3>
                 <a
                   href="https://www.linkedin.com/in/juan-cruz-cummaudo"
@@ -216,20 +238,16 @@ const About = () => {
                   </svg>
                 </a>
               </div>
-              <h4 className="text-lg text-gray-700 mb-4">Fundador & CEO</h4>
+              <h4 className="text-lg text-gray-700 mb-4">{founder?.role || "Fundador & CEO"}</h4>
               <p className="text-gray-600 mb-6">
-                Después de invertir más de $6,000 en capacitaciones y años de
-                experiencia en el campo, Juan desarrolló un sistema efectivo de
-                prospección B2B. Su experiencia y metodología son la base de
-                Cromax, ayudando a empresas TI a conseguir reuniones calificadas
-                de manera consistente.
+                {founder?.description || "Después de invertir más de $6,000 en capacitaciones y años de experiencia en el campo, Juan desarrolló un sistema efectivo de prospección B2B. Su experiencia y metodología son la base de Cromax, ayudando a empresas TI a conseguir reuniones calificadas de manera consistente."}
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                {[
+                {(founder?.tags || [
                   "Especialista en Linkedin",
                   "Lider de equipo",
                   "Analista de negocios B2B",
-                ].map((tag, index) => (
+                ]).map((tag, index) => (
                   <span
                     key={index}
                     className="bg-[#4188fa]/5 text-[#4188fa] px-3 py-1 rounded-full text-sm font-medium"

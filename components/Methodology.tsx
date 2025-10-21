@@ -38,7 +38,7 @@ const Methodology = ({ title, subtitle, items }: MethodologyProps) => {
           />
         </svg>
       ),
-      metric: {
+      metric: item.metric || {
         value: `+${(index + 1) * 25}%`,
         label: "Mejora",
         color: "blue",
