@@ -44,13 +44,13 @@ export default function Home() {
       />
 
       {/* About */}
-      {typedContent.about && (
+     {/*  {typedContent.about && (
         <About
           title={typedContent.about.title}
           company={typedContent.about.company}
           founder={typedContent.about.founder}
         />
-      )}
+      )} */}
 
       {/* Target Audience */}
       {typedContent.audience && (
