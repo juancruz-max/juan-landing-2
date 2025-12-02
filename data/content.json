@@ -170,7 +170,7 @@
   },
   "recapitulacion": {
     "title": "Recapitulando todo lo que vas a llevar",
-    "subtitle": "Un valor total de $2,197 por solo $300",
+    "subtitle": "",
     "modules": [
       {
         "title": "Definición de tu cliente ideal desde cero",
@@ -211,11 +211,11 @@
       }
     ],
     "totalPrice": 2197,
-    "finalPrice": 300,
-    "futurePrice": 500,
+    "finalPrice": 500,
+    "futurePrice": 700,
     "priceNote": "Como se van a estar agregando nuevos módulos constantemente, el precio irá subiendo.",
     "cta": {
-      "text": "¡Quiero aprovechar el último lugar y recibir todo esto por $300!",
+      "text": "¡Quiero recibir todo esto por $500!",
       "url": "https://wa.me/+5492664034415"
     },
     "items": []
