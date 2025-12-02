@@ -331,10 +331,10 @@
     "note": "Como se van a estar agregando nuevos módulos constantemente, el precio irá subiendo.",
     "limitedOffer": {
       "remainingSpots": 5,
-      "currentPrice": "$300 USD",
-      "futurePrice": "$500 USD",
+      "currentPrice": "$500 USD",
+      "futurePrice": "$700 USD",
       "originalPrice": "$2,197 USD",
-      "urgencyText": "🔥 Último cupo disponible",
+      "urgencyText": "🔥 Último 5 cupos disponibles",
       "isActive": true
     },
     "cta": {
